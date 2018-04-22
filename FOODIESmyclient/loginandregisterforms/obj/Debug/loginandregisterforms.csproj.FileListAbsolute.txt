@@ -27,3 +27,17 @@ D:\4th smester\OOAD LAB\Visual Studio 2015\Projects\FOODIESmyclient\loginandregi
 C:\Users\MALYKA\Desktop\FOODIESmyclient\loginandregisterforms\bin\Debug\loginandregisterforms.exe.config
 C:\Users\MALYKA\Desktop\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.exe
 C:\Users\MALYKA\Desktop\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.pdb
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\bin\Debug\loginandregisterforms.exe.config
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.exe
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.pdb
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\bin\Debug\loginandregisterforms.exe
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\bin\Debug\loginandregisterforms.pdb
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.csprojResolveAssemblyReference.cache
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Add_items.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Cashierlogin.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.forget.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Form1.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Login.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Properties.Resources.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.UserLogin.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.csproj.GenerateResource.Cache

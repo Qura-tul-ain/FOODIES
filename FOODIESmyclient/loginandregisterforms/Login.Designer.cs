@@ -143,6 +143,7 @@
             this.linkLabel3.TabIndex = 9;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Add Items";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel4
             // 

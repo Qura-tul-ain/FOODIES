@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add items.Designer.cs">
+      <DependentUpon>Add items.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashierlogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add items.resx">
+      <DependentUpon>Add items.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashierlogin.resx">
       <DependentUpon>Cashierlogin.cs</DependentUpon>
     </EmbeddedResource>

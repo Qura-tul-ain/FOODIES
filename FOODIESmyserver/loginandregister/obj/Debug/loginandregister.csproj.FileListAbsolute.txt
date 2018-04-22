@@ -36,3 +36,21 @@ D:\4th smester\OOAD LAB\Visual Studio 2015\Projects\FOODIESmyserver\loginandregi
 D:\4th smester\OOAD LAB\Visual Studio 2015\Projects\FOODIESmyserver\loginandregister\bin\Microsoft.AI.Web.xml
 D:\4th smester\OOAD LAB\Visual Studio 2015\Projects\FOODIESmyserver\loginandregister\bin\Microsoft.AI.WindowsServer.xml
 D:\4th smester\OOAD LAB\Visual Studio 2015\Projects\FOODIESmyserver\loginandregister\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\ApplicationInsights.config
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\loginandregister.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\loginandregister.pdb
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.Web.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.Web.xml
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\obj\Debug\loginandregister.csprojResolveAssemblyReference.cache
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\obj\Debug\loginandregister.dll
+C:\Users\ok\Desktop\FOODIES\FOODIESmyserver\loginandregister\obj\Debug\loginandregister.pdb
