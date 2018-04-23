@@ -54,5 +54,14 @@ namespace loginandregisterforms
             o.Show();
 
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Add_deals o = new Add_deals();
+            this.Hide();
+            o.Show();
+
+
+        }
     }
 }

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add deals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add deals.Designer.cs">
+      <DependentUpon>Add deals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add items.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add deals.resx">
+      <DependentUpon>Add deals.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add items.resx">
       <DependentUpon>Add items.cs</DependentUpon>
     </EmbeddedResource>

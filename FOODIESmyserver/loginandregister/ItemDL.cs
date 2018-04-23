@@ -10,6 +10,7 @@ namespace loginandregister
     public class ItemDL
     { 
      [DataMember]
+      
         public static List<Item> items = new List<Item>();
         public static void additem(string name, string category, string price)
         {
@@ -20,5 +21,10 @@ namespace loginandregister
             ItemDL.items.Add(ab);
 
         }
+        public static Item getlist()
+        {
+            return  items;
+        }
+
     }
 }

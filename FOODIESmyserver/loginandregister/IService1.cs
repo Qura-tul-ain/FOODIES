@@ -26,7 +26,12 @@ namespace loginandregister
         void additem(string name, string category, string price);
 
         [OperationContract]
+        Item getlist();
+
+        [OperationContract]
         string GetData(int value);
+
+      
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

@@ -51,5 +51,11 @@ namespace loginandregister
         {
             ItemDL.additem(name, category, price);
         }
+
+        public Item getlist()
+        {
+            return ItemDL.getlist();
+        }
+
     }
 }
