@@ -65,8 +65,8 @@ namespace loginandregisterforms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
-            dataGridView1.DataSource = table;
+            //table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
+            //dataGridView1.DataSource = table;
 
 
         }

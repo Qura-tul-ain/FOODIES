@@ -88,3 +88,5 @@ C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\
 C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Properties.Resources.resources
 C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.UserLogin.resources
 C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.csproj.GenerateResource.Cache
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Add_deals.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.menu.resources
