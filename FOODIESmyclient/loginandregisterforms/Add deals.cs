@@ -24,17 +24,45 @@ namespace loginandregisterforms
             table.Columns.Add("Price", typeof(int));
 
             dataGridView1.DataSource = table;
+
             server.Service1 obj = new server.Service1();
-            
+            List<server.Item> list = obj.getlist().ToList<server.Item>();
+            foreach (server.Item u in list)
+            {
+                BindingSource s = new BindingSource();
+                s.DataSource = u;
+                dataGridView1.DataSource = s;
 
+
+            }
         }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             server.Service1 obj = new server.Service1();
-            foreach(items u in ItemDL)
+            List<server.Item> list = obj.getlist().ToList<server.Item>();
+            foreach (server.Item u in list)
             {
+                BindingSource s = new BindingSource();
+                s.DataSource = u;
+                dataGridView1.DataSource = s;
 
+
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Add_items o = new Add_items();
+            this.Hide();
+            o.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+
+
+            }
         }
     }
 }

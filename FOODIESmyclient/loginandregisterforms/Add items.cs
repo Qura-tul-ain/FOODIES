@@ -35,19 +35,37 @@ namespace loginandregisterforms
             server.Service1 myitems = new server.Service1();
             myitems.additem(textBox1.Text, comboBox1.Text, textBox2.Text);
 
-            table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
-            dataGridView1.DataSource = table;
+            //table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
+            //dataGridView1.DataSource = table;
 
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-         
-            table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
-            dataGridView1.DataSource = table;
 
             
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Add_deals o = new Add_deals();
+            this.Hide();
+            o.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            server.Service1 obj = new server.Service1();
+            List<server.Item> list = obj.getlist().ToList<server.Item>();
+            foreach (server.Item u in list)
+            {
+                BindingSource s = new BindingSource();
+                s.DataSource = u;
+                dataGridView1.DataSource = s;
+
+
+            }
         }
     }
 }

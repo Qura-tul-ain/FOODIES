@@ -26,7 +26,7 @@ namespace loginandregister
         void additem(string name, string category, string price);
 
         [OperationContract]
-        Item getlist();
+        List<Item> getlist();
 
         [OperationContract]
         string GetData(int value);

@@ -18,7 +18,7 @@ namespace loginandregister
 
             Boolean ac = false;
             Boolean ab = false;
-            Boolean omg = false;
+          //  Boolean omg = false;
             foreach (User b in Userdl.RegisterUser)
             {
                 if (b.Name == name)

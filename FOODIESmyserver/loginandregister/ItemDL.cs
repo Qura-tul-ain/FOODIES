@@ -21,9 +21,10 @@ namespace loginandregister
             ItemDL.items.Add(ab);
 
         }
-        public static Item getlist()
+        public static List<Item> getlist()
         {
-            return  items;
+            return ItemDL.items;
+
         }
 
     }

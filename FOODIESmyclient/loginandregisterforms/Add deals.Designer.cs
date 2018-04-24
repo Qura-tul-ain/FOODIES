@@ -32,16 +32,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.QUANT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRICE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DEAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.DEA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.PRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,6 +73,7 @@
             this.linkLabel1.TabIndex = 34;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add items";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button1
             // 
@@ -90,21 +84,6 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "ADD DEALS";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // QUANT
-            // 
-            this.QUANT.HeaderText = "DELETE";
-            this.QUANT.Name = "QUANT";
-            // 
-            // PRICE
-            // 
-            this.PRICE.HeaderText = "PRICE";
-            this.PRICE.Name = "PRICE";
-            // 
-            // DEAL
-            // 
-            this.DEAL.HeaderText = "DEAL ITEMS";
-            this.DEAL.Name = "DEAL";
             // 
             // linkLabel2
             // 
@@ -117,11 +96,6 @@
             this.linkLabel2.TabIndex = 36;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Home";
-            // 
-            // DEA
-            // 
-            this.DEA.HeaderText = "DEAL NO";
-            this.DEA.Name = "DEA";
             // 
             // label3
             // 
@@ -141,29 +115,9 @@
             this.comboBox1.Size = new System.Drawing.Size(95, 21);
             this.comboBox1.TabIndex = 30;
             // 
-            // PRI
-            // 
-            this.PRI.HeaderText = "PRICE";
-            this.PRI.Name = "PRI";
-            // 
-            // CAR
-            // 
-            this.CAR.HeaderText = "CATEGORY";
-            this.CAR.Name = "CAR";
-            // 
-            // NA
-            // 
-            this.NA.HeaderText = "ITEM";
-            this.NA.Name = "NA";
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DEA,
-            this.DEAL,
-            this.PRICE,
-            this.QUANT});
             this.dataGridView2.Location = new System.Drawing.Point(29, 232);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(399, 110);
@@ -172,10 +126,6 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NA,
-            this.CAR,
-            this.PRI});
             this.dataGridView1.Location = new System.Drawing.Point(30, 114);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(345, 94);
@@ -223,16 +173,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QUANT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRICE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DEAL;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DEA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CAR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NA;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
