@@ -24,8 +24,10 @@ namespace loginandregisterforms
             table.Columns.Add("Price", typeof(int));
 
             dataGridView1.DataSource = table;
+            show();
+       
 
-            server.Service1 obj = new server.Service1();
+        /*server.Service1 obj = new server.Service1();
             List<server.Item> list = obj.getlist().ToList<server.Item>();
             foreach (server.Item u in list)
             {
@@ -34,10 +36,19 @@ namespace loginandregisterforms
                 dataGridView1.DataSource = s;
 
 
-            }
+            }*/
+        }
+        public void show()
+        {
+            server.Service1 o = new server.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = o.getlist();
+            dataGridView1.DataSource = bs;
+
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             server.Service1 obj = new server.Service1();
             List<server.Item> list = obj.getlist().ToList<server.Item>();
             foreach (server.Item u in list)
@@ -65,4 +76,4 @@ namespace loginandregisterforms
             }
         }
     }
-}
+

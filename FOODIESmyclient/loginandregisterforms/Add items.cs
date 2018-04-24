@@ -30,21 +30,45 @@ namespace loginandregisterforms
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+
 
             server.Service1 myitems = new server.Service1();
             myitems.additem(textBox1.Text, comboBox1.Text, textBox2.Text);
+            show();
 
-            //table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
-            //dataGridView1.DataSource = table;
 
+           /* table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
+            dataGridView1.DataSource = table;
+            server.Service1 obj = new server.Service1();
+            List<server.Item> list = obj.getlist().ToList<server.Item>();
+            foreach (server.Item u in list)
+            {
+                BindingSource s = new BindingSource();
+                s.DataSource = u;
+                dataGridView1.DataSource = s;
+
+
+            }*/
+
+
+
+        }
+
+        public void show()
+        {
+            server.Service1 o = new server.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = o.getlist();
+            dataGridView1.DataSource = bs;
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            table.Rows.Add(textBox1.Text, comboBox1.Text, textBox2.Text);
+            dataGridView1.DataSource = table;
 
-            
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -56,16 +80,8 @@ namespace loginandregisterforms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            server.Service1 obj = new server.Service1();
-            List<server.Item> list = obj.getlist().ToList<server.Item>();
-            foreach (server.Item u in list)
-            {
-                BindingSource s = new BindingSource();
-                s.DataSource = u;
-                dataGridView1.DataSource = s;
 
-
-            }
         }
     }
 }
+

@@ -52,7 +52,7 @@ namespace loginandregister
             ItemDL.additem(name, category, price);
         }
 
-        public List<Item> getlist()
+        public  List<Item> getlist()
         {
             return ItemDL.getlist();
         }

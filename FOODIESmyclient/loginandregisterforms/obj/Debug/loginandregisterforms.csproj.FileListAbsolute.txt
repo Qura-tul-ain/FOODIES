@@ -71,3 +71,4 @@ C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\log
 C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Properties.Resources.resources
 C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.UserLogin.resources
 C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.csproj.GenerateResource.Cache
+C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.menu.resources

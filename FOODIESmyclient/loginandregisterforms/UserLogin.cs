@@ -44,5 +44,12 @@ namespace loginandregisterforms
                 MessageBox.Show("Invalid user");
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            menu o = new menu();
+            this.Hide();
+            o.Show();
+        }
     }
 }
