@@ -31,6 +31,12 @@
   <wsdl:message name="IService1_additem_OutputMessage">
     <wsdl:part name="parameters" element="tns:additemResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_adddeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:adddeal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_adddeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:adddealResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_getlist_InputMessage">
     <wsdl:part name="parameters" element="tns:getlist" />
   </wsdl:message>
@@ -42,6 +48,12 @@
   </wsdl:message>
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getdeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:getdeal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getdeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getdealResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
@@ -66,6 +78,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/additem" message="tns:IService1_additem_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/additemResponse" message="tns:IService1_additem_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="adddeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/adddeal" message="tns:IService1_adddeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/adddealResponse" message="tns:IService1_adddeal_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="getlist">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getlist" message="tns:IService1_getlist_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getlistResponse" message="tns:IService1_getlist_OutputMessage" />
@@ -73,6 +89,10 @@
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getdeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getdeal" message="tns:IService1_getdeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getdealResponse" message="tns:IService1_getdeal_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -117,6 +137,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="adddeal">
+      <soap:operation soapAction="http://tempuri.org/IService1/adddeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getlist">
       <soap:operation soapAction="http://tempuri.org/IService1/getlist" style="document" />
       <wsdl:input>
@@ -128,6 +157,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getdeal">
+      <soap:operation soapAction="http://tempuri.org/IService1/getdeal" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

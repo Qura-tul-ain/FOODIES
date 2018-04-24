@@ -24,12 +24,16 @@ namespace loginandregister
 
         [OperationContract]
         void additem(string name, string category, string price);
-
+        [OperationContract]
+         void adddeal(string name, string price);
         [OperationContract]
         List<Item> getlist();
 
         [OperationContract]
         string GetData(int value);
+
+        [OperationContract]
+        List<Deal> getdeal();
 
       
 

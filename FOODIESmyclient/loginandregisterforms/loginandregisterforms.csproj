@@ -148,6 +148,9 @@
     <None Include="Web References\server\CompositeType.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\server\Deal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\server\Item.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>

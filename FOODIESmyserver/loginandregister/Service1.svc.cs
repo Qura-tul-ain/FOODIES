@@ -56,6 +56,13 @@ namespace loginandregister
         {
             return ItemDL.getlist();
         }
-
+        public void adddeal(string name, string price)
+        {
+            dealDl.adddeal(name, price);
+        }
+        public List<Deal> getdeal()
+        {
+            return dealDl.getdeal();
+        }
     }
 }

@@ -81,6 +81,28 @@ namespace loginandregisterforms
             this.Hide();
             o.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            server.Service1 mydeals = new server.Service1();
+            mydeals.adddeal(textBox1.Text, textBox2.Text);
+            dealshow();
+            
+
+        }
+
+        public void dealshow()
+        {
+            server.Service1 o = new server.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = o.getdeal();
+            dataGridView2.DataSource = bs;
+
+        }
+
+
+
     }
     }
 

@@ -95,6 +95,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deal.cs" />
+    <Compile Include="dealDl.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemDL.cs" />
     <Compile Include="Service1.svc.cs">

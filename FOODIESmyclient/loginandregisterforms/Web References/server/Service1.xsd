@@ -14,6 +14,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Item" nillable="true" type="tns:Item" />
+  <xs:complexType name="ArrayOfDeal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Deal" nillable="true" type="tns:Deal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeal" nillable="true" type="tns:ArrayOfDeal" />
+  <xs:complexType name="Deal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Deal" nillable="true" type="tns:Deal" />
   <xs:complexType name="CompositeType">
     <xs:sequence>
       <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
