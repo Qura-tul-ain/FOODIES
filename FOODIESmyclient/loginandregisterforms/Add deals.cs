@@ -74,6 +74,13 @@ namespace loginandregisterforms
 
 
             }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 o = new Form1();
+            this.Hide();
+            o.Show();
         }
+    }
     }
 
