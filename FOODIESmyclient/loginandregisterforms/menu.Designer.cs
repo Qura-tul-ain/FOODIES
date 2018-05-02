@@ -31,15 +31,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.QN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.QUANT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -47,11 +48,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.QUANT});
-            this.dataGridView1.Location = new System.Drawing.Point(185, 131);
+            this.dataGridView1.Location = new System.Drawing.Point(210, 112);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(436, 109);
+            this.dataGridView1.Size = new System.Drawing.Size(436, 128);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -71,10 +70,20 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.QN,
             this.DEL});
-            this.dataGridView2.Location = new System.Drawing.Point(185, 274);
+            this.dataGridView2.Location = new System.Drawing.Point(205, 274);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(441, 106);
             this.dataGridView2.TabIndex = 30;
+            // 
+            // QN
+            // 
+            this.QN.HeaderText = "QUANTITY";
+            this.QN.Name = "QN";
+            // 
+            // DEL
+            // 
+            this.DEL.HeaderText = "DELETE";
+            this.DEL.Name = "DEL";
             // 
             // label3
             // 
@@ -125,7 +134,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gabriola", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 131);
+            this.label6.Location = new System.Drawing.Point(25, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 35);
             this.label6.TabIndex = 31;
@@ -134,33 +143,37 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(50, 182);
+            this.button1.Location = new System.Drawing.Point(116, 162);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 40);
             this.button1.TabIndex = 35;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // QUANT
+            // label2
             // 
-            this.QUANT.HeaderText = "QUANTITY";
-            this.QUANT.Name = "QUANT";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gabriola", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 28);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Quantity";
             // 
-            // QN
+            // textBox1
             // 
-            this.QN.HeaderText = "QUANTITY";
-            this.QN.Name = "QN";
-            // 
-            // DEL
-            // 
-            this.DEL.HeaderText = "DELETE";
-            this.DEL.Name = "DEL";
+            this.textBox1.Location = new System.Drawing.Point(90, 120);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 37;
             // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 425);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -191,8 +204,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QUANT;
         private System.Windows.Forms.DataGridViewTextBoxColumn QN;
         private System.Windows.Forms.DataGridViewTextBoxColumn DEL;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
