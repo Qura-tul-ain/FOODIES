@@ -40,5 +40,17 @@ namespace loginandregisterforms
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*foreach(DataGridViewRow item in dataGridView1.Rows)
+            {
+                if ((bool)item.Cells[0].Value == true)
+                {
+                    int n = dataGridView2.Rows.Add();
+                    dataGridView2.Rows[n].Cells[0].Value == item.Cells[1].Value.ToString();
+                }
+        }*/
+        }
     }
 }
