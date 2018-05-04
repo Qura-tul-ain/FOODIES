@@ -9,7 +9,7 @@ namespace loginandregister
     [DataContract]
     public class Item
     {
-       
+        private string quantity;
         private string itemName;
         [DataMember]
         public string ItemName
@@ -32,5 +32,18 @@ namespace loginandregister
             set { price = value; }
         }
 
+        [DataMember]
+        public string Quantity
+        {
+            get
+            {
+                return quantity;
+            }
+
+            set
+            {
+                quantity = value;
+            }
+        }
     }
 }

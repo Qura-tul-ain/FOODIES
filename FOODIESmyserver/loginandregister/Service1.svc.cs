@@ -64,5 +64,30 @@ namespace loginandregister
         {
             return dealDl.getdeal();
         }
+
+        public void orderitem(string name,string category,string price,string quantity)
+        {
+            ItemDL.orderitem(name, category, price, quantity);
+        }
+
+        public void oederdeal(string name, string category, string price, string quantity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Item> getorder()
+        {
+            return ItemDL.getorder();
+        }
+
+        public  void Tprice(int x)
+        {
+            ItemDL.Tprice(x);
+        }
+
+        public int getprice()
+        {
+            return ItemDL.getprice();
+        }
     }
 }

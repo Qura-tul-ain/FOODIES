@@ -55,6 +55,30 @@
   <wsdl:message name="IService1_getdeal_OutputMessage">
     <wsdl:part name="parameters" element="tns:getdealResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_orderitem_InputMessage">
+    <wsdl:part name="parameters" element="tns:orderitem" />
+  </wsdl:message>
+  <wsdl:message name="IService1_orderitem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:orderitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getorder_InputMessage">
+    <wsdl:part name="parameters" element="tns:getorder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getorder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Tprice_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tprice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Tprice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TpriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getprice_InputMessage">
+    <wsdl:part name="parameters" element="tns:getprice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getprice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpriceResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -93,6 +117,22 @@
     <wsdl:operation name="getdeal">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getdeal" message="tns:IService1_getdeal_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getdealResponse" message="tns:IService1_getdeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="orderitem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/orderitem" message="tns:IService1_orderitem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/orderitemResponse" message="tns:IService1_orderitem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getorder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getorder" message="tns:IService1_getorder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getorderResponse" message="tns:IService1_getorder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tprice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Tprice" message="tns:IService1_Tprice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TpriceResponse" message="tns:IService1_Tprice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getprice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getprice" message="tns:IService1_getprice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getpriceResponse" message="tns:IService1_getprice_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -166,6 +206,42 @@
     </wsdl:operation>
     <wsdl:operation name="getdeal">
       <soap:operation soapAction="http://tempuri.org/IService1/getdeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderitem">
+      <soap:operation soapAction="http://tempuri.org/IService1/orderitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getorder">
+      <soap:operation soapAction="http://tempuri.org/IService1/getorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tprice">
+      <soap:operation soapAction="http://tempuri.org/IService1/Tprice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getprice">
+      <soap:operation soapAction="http://tempuri.org/IService1/getprice" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

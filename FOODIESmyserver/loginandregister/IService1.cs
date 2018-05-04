@@ -35,7 +35,17 @@ namespace loginandregister
         [OperationContract]
         List<Deal> getdeal();
 
-      
+        [OperationContract]
+        void orderitem(string name, string category, string price, string quantity);
+
+        [OperationContract]
+        List<Item> getorder();
+        [OperationContract]
+        void Tprice(int x);
+        [OperationContract]
+        int getprice();
+
+
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
