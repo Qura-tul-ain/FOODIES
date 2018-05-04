@@ -29,5 +29,10 @@ namespace loginandregisterforms
             o.getprice(out getprice,out getpriceresult);
             textBox1.Text = Convert.ToString(getprice);
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
