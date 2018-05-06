@@ -79,6 +79,30 @@
   <wsdl:message name="IService1_getprice_OutputMessage">
     <wsdl:part name="parameters" element="tns:getpriceResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_gettotalprice_InputMessage">
+    <wsdl:part name="parameters" element="tns:gettotalprice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gettotalprice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gettotalpriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gettax_InputMessage">
+    <wsdl:part name="parameters" element="tns:gettax" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gettax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gettaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addlocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:addlocation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addlocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addlocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_islocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:islocation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_islocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:islocationResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -133,6 +157,22 @@
     <wsdl:operation name="getprice">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getprice" message="tns:IService1_getprice_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getpriceResponse" message="tns:IService1_getprice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gettotalprice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/gettotalprice" message="tns:IService1_gettotalprice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/gettotalpriceResponse" message="tns:IService1_gettotalprice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gettax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/gettax" message="tns:IService1_gettax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/gettaxResponse" message="tns:IService1_gettax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addlocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addlocation" message="tns:IService1_addlocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addlocationResponse" message="tns:IService1_addlocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="islocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/islocation" message="tns:IService1_islocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/islocationResponse" message="tns:IService1_islocation_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -242,6 +282,42 @@
     </wsdl:operation>
     <wsdl:operation name="getprice">
       <soap:operation soapAction="http://tempuri.org/IService1/getprice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettotalprice">
+      <soap:operation soapAction="http://tempuri.org/IService1/gettotalprice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettax">
+      <soap:operation soapAction="http://tempuri.org/IService1/gettax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addlocation">
+      <soap:operation soapAction="http://tempuri.org/IService1/addlocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="islocation">
+      <soap:operation soapAction="http://tempuri.org/IService1/islocation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

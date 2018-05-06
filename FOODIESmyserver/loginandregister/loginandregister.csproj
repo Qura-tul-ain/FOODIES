@@ -99,6 +99,8 @@
     <Compile Include="dealDl.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemDL.cs" />
+    <Compile Include="payment.cs" />
+    <Compile Include="paymentDL.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

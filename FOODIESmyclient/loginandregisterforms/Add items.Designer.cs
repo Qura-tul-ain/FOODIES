@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -41,7 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +57,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(431, 150);
             this.dataGridView1.TabIndex = 40;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Delete";
+            this.Column1.Name = "Column1";
             // 
             // label6
             // 
@@ -71,7 +78,7 @@
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(563, 65);
+            this.linkLabel3.Location = new System.Drawing.Point(575, 65);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(69, 29);
             this.linkLabel3.TabIndex = 38;
@@ -96,7 +103,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(474, 65);
+            this.linkLabel1.Location = new System.Drawing.Point(496, 65);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(73, 29);
             this.linkLabel1.TabIndex = 35;
@@ -107,7 +114,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Gabriola", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(568, 185);
+            this.button1.Location = new System.Drawing.Point(610, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 37);
             this.button1.TabIndex = 34;
@@ -124,21 +131,21 @@
             "Cold Drinks",
             "Pizza",
             "Burger"});
-            this.comboBox1.Location = new System.Drawing.Point(247, 194);
+            this.comboBox1.Location = new System.Drawing.Point(190, 193);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(104, 21);
             this.comboBox1.TabIndex = 33;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(401, 195);
+            this.textBox2.Location = new System.Drawing.Point(337, 193);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(105, 20);
             this.textBox2.TabIndex = 32;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 194);
+            this.textBox1.Location = new System.Drawing.Point(48, 194);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(99, 20);
             this.textBox1.TabIndex = 31;
@@ -147,7 +154,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gabriola", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(405, 144);
+            this.label4.Location = new System.Drawing.Point(331, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 35);
             this.label4.TabIndex = 30;
@@ -157,7 +164,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gabriola", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(250, 144);
+            this.label3.Location = new System.Drawing.Point(184, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 35);
             this.label3.TabIndex = 29;
@@ -167,7 +174,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gabriola", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(97, 144);
+            this.label2.Location = new System.Drawing.Point(42, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 35);
             this.label2.TabIndex = 28;
@@ -177,22 +184,36 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gabriola", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(213, 65);
+            this.label1.Location = new System.Drawing.Point(244, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 45);
             this.label1.TabIndex = 27;
             this.label1.Text = "ADD NEW ITEMS";
             // 
-            // Column1
+            // label5
             // 
-            this.Column1.HeaderText = "Delete";
-            this.Column1.Name = "Column1";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(470, 150);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 29);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Location";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(466, 193);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 42;
             // 
             // Add_items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 422);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.linkLabel3);
@@ -230,5 +251,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

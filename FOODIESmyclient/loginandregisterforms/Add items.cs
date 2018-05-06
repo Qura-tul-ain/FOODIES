@@ -31,9 +31,9 @@ namespace loginandregisterforms
         private void button1_Click(object sender, EventArgs e)
         {
 
-
             server.Service1 myitems = new server.Service1();
             myitems.additem(textBox1.Text, comboBox1.Text, textBox2.Text);
+            myitems.addlocation(textBox3.Text);
             show();
 
 
@@ -60,6 +60,7 @@ namespace loginandregisterforms
             BindingSource bs = new BindingSource();
             bs.DataSource = o.getlist();
             dataGridView1.DataSource = bs;
+            dataGridView1.Columns["Quantity"].Visible = false;
 
         }
 

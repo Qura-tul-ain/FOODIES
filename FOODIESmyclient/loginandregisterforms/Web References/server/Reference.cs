@@ -53,6 +53,14 @@ namespace loginandregisterforms.server {
         
         private System.Threading.SendOrPostCallback getpriceOperationCompleted;
         
+        private System.Threading.SendOrPostCallback gettotalpriceOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback gettaxOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addlocationOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback islocationOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
@@ -128,6 +136,18 @@ namespace loginandregisterforms.server {
         
         /// <remarks/>
         public event getpriceCompletedEventHandler getpriceCompleted;
+        
+        /// <remarks/>
+        public event gettotalpriceCompletedEventHandler gettotalpriceCompleted;
+        
+        /// <remarks/>
+        public event gettaxCompletedEventHandler gettaxCompleted;
+        
+        /// <remarks/>
+        public event addlocationCompletedEventHandler addlocationCompleted;
+        
+        /// <remarks/>
+        public event islocationCompletedEventHandler islocationCompleted;
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
@@ -506,6 +526,120 @@ namespace loginandregisterforms.server {
             if ((this.getpriceCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getpriceCompleted(this, new getpriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/gettotalprice", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void gettotalprice(out int gettotalpriceResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool gettotalpriceResultSpecified) {
+            object[] results = this.Invoke("gettotalprice", new object[0]);
+            gettotalpriceResult = ((int)(results[0]));
+            gettotalpriceResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void gettotalpriceAsync() {
+            this.gettotalpriceAsync(null);
+        }
+        
+        /// <remarks/>
+        public void gettotalpriceAsync(object userState) {
+            if ((this.gettotalpriceOperationCompleted == null)) {
+                this.gettotalpriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OngettotalpriceOperationCompleted);
+            }
+            this.InvokeAsync("gettotalprice", new object[0], this.gettotalpriceOperationCompleted, userState);
+        }
+        
+        private void OngettotalpriceOperationCompleted(object arg) {
+            if ((this.gettotalpriceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.gettotalpriceCompleted(this, new gettotalpriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/gettax", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void gettax(out int gettaxResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool gettaxResultSpecified) {
+            object[] results = this.Invoke("gettax", new object[0]);
+            gettaxResult = ((int)(results[0]));
+            gettaxResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void gettaxAsync() {
+            this.gettaxAsync(null);
+        }
+        
+        /// <remarks/>
+        public void gettaxAsync(object userState) {
+            if ((this.gettaxOperationCompleted == null)) {
+                this.gettaxOperationCompleted = new System.Threading.SendOrPostCallback(this.OngettaxOperationCompleted);
+            }
+            this.InvokeAsync("gettax", new object[0], this.gettaxOperationCompleted, userState);
+        }
+        
+        private void OngettaxOperationCompleted(object arg) {
+            if ((this.gettaxCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.gettaxCompleted(this, new gettaxCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addlocation", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addlocation([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            this.Invoke("addlocation", new object[] {
+                        name});
+        }
+        
+        /// <remarks/>
+        public void addlocationAsync(string name) {
+            this.addlocationAsync(name, null);
+        }
+        
+        /// <remarks/>
+        public void addlocationAsync(string name, object userState) {
+            if ((this.addlocationOperationCompleted == null)) {
+                this.addlocationOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddlocationOperationCompleted);
+            }
+            this.InvokeAsync("addlocation", new object[] {
+                        name}, this.addlocationOperationCompleted, userState);
+        }
+        
+        private void OnaddlocationOperationCompleted(object arg) {
+            if ((this.addlocationCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addlocationCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/islocation", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void islocation([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string adress, out bool islocationResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool islocationResultSpecified) {
+            object[] results = this.Invoke("islocation", new object[] {
+                        adress});
+            islocationResult = ((bool)(results[0]));
+            islocationResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void islocationAsync(string adress) {
+            this.islocationAsync(adress, null);
+        }
+        
+        /// <remarks/>
+        public void islocationAsync(string adress, object userState) {
+            if ((this.islocationOperationCompleted == null)) {
+                this.islocationOperationCompleted = new System.Threading.SendOrPostCallback(this.OnislocationOperationCompleted);
+            }
+            this.InvokeAsync("islocation", new object[] {
+                        adress}, this.islocationOperationCompleted, userState);
+        }
+        
+        private void OnislocationOperationCompleted(object arg) {
+            if ((this.islocationCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.islocationCompleted(this, new islocationCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -950,6 +1084,112 @@ namespace loginandregisterforms.server {
         
         /// <remarks/>
         public bool getpriceResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void gettotalpriceCompletedEventHandler(object sender, gettotalpriceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class gettotalpriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal gettotalpriceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int gettotalpriceResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool gettotalpriceResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void gettaxCompletedEventHandler(object sender, gettaxCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class gettaxCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal gettaxCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int gettaxResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool gettaxResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void addlocationCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void islocationCompletedEventHandler(object sender, islocationCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class islocationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal islocationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool islocationResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool islocationResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

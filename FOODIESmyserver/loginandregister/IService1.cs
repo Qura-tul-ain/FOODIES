@@ -44,6 +44,16 @@ namespace loginandregister
         void Tprice(int x);
         [OperationContract]
         int getprice();
+        [OperationContract]
+        int gettotalprice();
+
+        [OperationContract]
+        int gettax();
+
+        [OperationContract]
+        void addlocation(string name);
+        [OperationContract]
+        bool islocation(string adress);
 
 
 

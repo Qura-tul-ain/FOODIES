@@ -23,7 +23,7 @@ namespace loginandregisterforms
             this.Hide();
             o.Show();
         }
-
+        bool validcall;
         private void button1_Click(object sender, EventArgs e)
         {
             bool isvalid;
@@ -33,10 +33,12 @@ namespace loginandregisterforms
             if (isvalid)
             {
                 MessageBox.Show("Valid user");
+                validcall = true;
             }
             else
             {
                 MessageBox.Show("Invalid user");
+                validcall = false;
             }
         }
 
@@ -49,22 +51,40 @@ namespace loginandregisterforms
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Add_items o = new Add_items();
-            this.Hide();
-            o.Show();
-
+            if (validcall == true)
+            {
+                Add_items o = new Add_items();
+                this.Hide();
+                o.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Login to Your Account");
+            }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Add_deals o = new Add_deals();
-            this.Hide();
-            o.Show();
+            if (validcall == true)
+            {
+                Add_deals o = new Add_deals();
+                this.Hide();
+                o.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Login to Your Account");
+            }
 
 
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

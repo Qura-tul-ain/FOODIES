@@ -16,6 +16,9 @@ namespace loginandregister
         public static List<Item> items = new List<Item>();
         public static List<Item> order = new List<Item>();
         public static int totalprice=0;
+        public static int price = 0;
+        public static int tax=20;
+
 
         public static void additem(string name, string category, string price)
         {
@@ -57,14 +60,27 @@ namespace loginandregister
         public static void Tprice(int x)
         {
 
-            ItemDL.totalprice = ItemDL.totalprice + x;
+            ItemDL.price = ItemDL.price + x;
+           // ItemDL.totalprice = ItemDL.price + tax;
         }
 
         public static int getprice()
         {
-            return ItemDL.totalprice;
+            return ItemDL.price;
 
         }
+
+        public static int gettax()
+        {
+            return ItemDL.tax;
+
+        }
+        public static int gettotalprice()
+        {
+            return ItemDL.totalprice;
+        }
+
+        
 
 
     }

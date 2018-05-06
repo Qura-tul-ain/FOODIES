@@ -35,6 +35,7 @@ namespace loginandregisterforms
             BindingSource bs = new BindingSource();
             bs.DataSource = o.getlist();
             dataGridView1.DataSource = bs;
+            dataGridView1.Columns["Quantity"].Visible = false;
 
         }
 

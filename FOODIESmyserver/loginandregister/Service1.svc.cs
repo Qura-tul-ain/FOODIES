@@ -52,7 +52,7 @@ namespace loginandregister
             ItemDL.additem(name, category, price);
         }
 
-        public  List<Item> getlist()
+        public List<Item> getlist()
         {
             return ItemDL.getlist();
         }
@@ -65,7 +65,7 @@ namespace loginandregister
             return dealDl.getdeal();
         }
 
-        public void orderitem(string name,string category,string price,string quantity)
+        public void orderitem(string name, string category, string price, string quantity)
         {
             ItemDL.orderitem(name, category, price, quantity);
         }
@@ -80,14 +80,35 @@ namespace loginandregister
             return ItemDL.getorder();
         }
 
-        public  void Tprice(int x)
+        public void Tprice(int x)
         {
             ItemDL.Tprice(x);
         }
+
+        
 
         public int getprice()
         {
             return ItemDL.getprice();
         }
+
+        public int gettotalprice()
+        {
+            return ItemDL.gettotalprice();
+        }
+        public int gettax()
+        {
+            return ItemDL.tax;
+        }
+        public void addlocation(string name)
+        {
+            paymentDL.addlocation(name);
+        }
+
+        public bool islocation(string adress)
+        {
+           return paymentDL.islocation(adress);
+        }
+
     }
 }

@@ -28,7 +28,7 @@ namespace loginandregisterforms
         {
 
         }
-
+        bool validuser;
         private void button1_Click(object sender, EventArgs e)
         {
             bool isvalid;
@@ -38,18 +38,32 @@ namespace loginandregisterforms
             if (isvalid)
             {
                 MessageBox.Show("Valid user");
+                validuser = true;
             }
             else
             {
                 MessageBox.Show("Invalid user");
+                validuser = false;
             }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            menu o = new menu();
-            this.Hide();
-            o.Show();
+            if (validuser == true)
+            {
+                menu o = new menu();
+                this.Hide();
+                o.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please loGin to Your Account ");
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
