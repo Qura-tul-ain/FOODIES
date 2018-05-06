@@ -54,6 +54,31 @@ namespace loginandregister
         void addlocation(string name);
         [OperationContract]
         bool islocation(string adress);
+        //for deals
+        [OperationContract]
+        void orderdeal(string name, string price, string quantity);
+
+        [OperationContract]
+        void orderprice(int x);
+
+        [OperationContract]
+        List<Deal> getorderlist();
+
+        [OperationContract]
+        double getorderprice();
+
+        [OperationContract]
+        void calTax(double x);
+
+        [OperationContract]
+        double getfinalbill();
+
+        [OperationContract]
+        void calfinalbill(double x);
+
+        [OperationContract]
+
+        double gettax1();
 
 
 

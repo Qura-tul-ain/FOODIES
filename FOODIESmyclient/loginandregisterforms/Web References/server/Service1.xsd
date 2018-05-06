@@ -25,6 +25,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Price" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Deal" nillable="true" type="tns:Deal" />

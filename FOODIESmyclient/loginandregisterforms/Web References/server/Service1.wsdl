@@ -103,6 +103,54 @@
   <wsdl:message name="IService1_islocation_OutputMessage">
     <wsdl:part name="parameters" element="tns:islocationResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_orderdeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:orderdeal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_orderdeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:orderdealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_orderprice_InputMessage">
+    <wsdl:part name="parameters" element="tns:orderprice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_orderprice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:orderpriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getorderlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:getorderlist" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getorderlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getorderlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getorderprice_InputMessage">
+    <wsdl:part name="parameters" element="tns:getorderprice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getorderprice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getorderpriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_calTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:calTax" />
+  </wsdl:message>
+  <wsdl:message name="IService1_calTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:calTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getfinalbill_InputMessage">
+    <wsdl:part name="parameters" element="tns:getfinalbill" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getfinalbill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getfinalbillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_calfinalbill_InputMessage">
+    <wsdl:part name="parameters" element="tns:calfinalbill" />
+  </wsdl:message>
+  <wsdl:message name="IService1_calfinalbill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:calfinalbillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gettax1_InputMessage">
+    <wsdl:part name="parameters" element="tns:gettax1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_gettax1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gettax1Response" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -173,6 +221,38 @@
     <wsdl:operation name="islocation">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/islocation" message="tns:IService1_islocation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/islocationResponse" message="tns:IService1_islocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="orderdeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/orderdeal" message="tns:IService1_orderdeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/orderdealResponse" message="tns:IService1_orderdeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="orderprice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/orderprice" message="tns:IService1_orderprice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/orderpriceResponse" message="tns:IService1_orderprice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getorderlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getorderlist" message="tns:IService1_getorderlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getorderlistResponse" message="tns:IService1_getorderlist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getorderprice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getorderprice" message="tns:IService1_getorderprice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getorderpriceResponse" message="tns:IService1_getorderprice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="calTax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/calTax" message="tns:IService1_calTax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/calTaxResponse" message="tns:IService1_calTax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getfinalbill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getfinalbill" message="tns:IService1_getfinalbill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getfinalbillResponse" message="tns:IService1_getfinalbill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="calfinalbill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/calfinalbill" message="tns:IService1_calfinalbill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/calfinalbillResponse" message="tns:IService1_calfinalbill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gettax1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/gettax1" message="tns:IService1_gettax1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/gettax1Response" message="tns:IService1_gettax1_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -318,6 +398,78 @@
     </wsdl:operation>
     <wsdl:operation name="islocation">
       <soap:operation soapAction="http://tempuri.org/IService1/islocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderdeal">
+      <soap:operation soapAction="http://tempuri.org/IService1/orderdeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderprice">
+      <soap:operation soapAction="http://tempuri.org/IService1/orderprice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getorderlist">
+      <soap:operation soapAction="http://tempuri.org/IService1/getorderlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getorderprice">
+      <soap:operation soapAction="http://tempuri.org/IService1/getorderprice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calTax">
+      <soap:operation soapAction="http://tempuri.org/IService1/calTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getfinalbill">
+      <soap:operation soapAction="http://tempuri.org/IService1/getfinalbill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calfinalbill">
+      <soap:operation soapAction="http://tempuri.org/IService1/calfinalbill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gettax1">
+      <soap:operation soapAction="http://tempuri.org/IService1/gettax1" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

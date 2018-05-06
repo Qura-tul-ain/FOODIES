@@ -56,6 +56,7 @@ namespace loginandregister
         {
             return ItemDL.getlist();
         }
+        //deals
         public void adddeal(string name, string price)
         {
             dealDl.adddeal(name, price);
@@ -64,7 +65,41 @@ namespace loginandregister
         {
             return dealDl.getdeal();
         }
+        public void orderdeal(string name, string price, string quantity)
+        {
+            dealDl.orderdeal(name, price, quantity);
+        }
+        public void orderprice(int x)
+        {
+            dealDl.orderprice(x);
+        }
+        public double getorderprice()
+        {
+            return dealDl.getorderprice();
+        }
+        public List<Deal> getorderlist()
+        {
+            return dealDl.getorderlist();
+        }
+        public void calTax(double x)
+        {
+            dealDl.calTax(x);
+        }
+        public double gettax1()
+        {
+            return dealDl.gettax1();
 
+        }
+        public double getfinalbill()
+        {
+            return dealDl.getfinalbill();
+        }
+        public void calfinalbill(double x)
+        {
+            dealDl.calfinalbill(x);
+        }
+
+        //deals_end
         public void orderitem(string name, string category, string price, string quantity)
         {
             ItemDL.orderitem(name, category, price, quantity);

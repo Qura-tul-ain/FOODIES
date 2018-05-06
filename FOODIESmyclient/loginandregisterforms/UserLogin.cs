@@ -63,7 +63,9 @@ namespace loginandregisterforms
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            see_deals s = new see_deals();
+            s.Show();
+            this.Hide();
         }
     }
 }

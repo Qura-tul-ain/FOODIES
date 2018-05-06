@@ -21,6 +21,13 @@ namespace loginandregister
             get { return price; }
             set { price = value; }
         }
+        private string quantity;
+
+        public string Quantity
+        {
+            get { return quantity; }
+            set { quantity = value; }
+        }
      
     }
 }
