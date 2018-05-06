@@ -37,6 +37,8 @@ namespace loginandregisterforms.server {
         
         private System.Threading.SendOrPostCallback additemOperationCompleted;
         
+        private System.Threading.SendOrPostCallback deleteOperationCompleted;
+        
         private System.Threading.SendOrPostCallback adddealOperationCompleted;
         
         private System.Threading.SendOrPostCallback getlistOperationCompleted;
@@ -128,6 +130,9 @@ namespace loginandregisterforms.server {
         
         /// <remarks/>
         public event additemCompletedEventHandler additemCompleted;
+        
+        /// <remarks/>
+        public event deleteCompletedEventHandler deleteCompleted;
         
         /// <remarks/>
         public event adddealCompletedEventHandler adddealCompleted;
@@ -325,6 +330,36 @@ namespace loginandregisterforms.server {
             if ((this.additemCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.additemCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/delete", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void delete(int index, [System.Xml.Serialization.XmlIgnoreAttribute()] bool indexSpecified) {
+            this.Invoke("delete", new object[] {
+                        index,
+                        indexSpecified});
+        }
+        
+        /// <remarks/>
+        public void deleteAsync(int index, bool indexSpecified) {
+            this.deleteAsync(index, indexSpecified, null);
+        }
+        
+        /// <remarks/>
+        public void deleteAsync(int index, bool indexSpecified, object userState) {
+            if ((this.deleteOperationCompleted == null)) {
+                this.deleteOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteOperationCompleted);
+            }
+            this.InvokeAsync("delete", new object[] {
+                        index,
+                        indexSpecified}, this.deleteOperationCompleted, userState);
+        }
+        
+        private void OndeleteOperationCompleted(object arg) {
+            if ((this.deleteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1228,6 +1263,10 @@ namespace loginandregisterforms.server {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void additemCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void deleteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]

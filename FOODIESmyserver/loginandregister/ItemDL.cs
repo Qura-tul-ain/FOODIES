@@ -29,6 +29,11 @@ namespace loginandregister
             ItemDL.items.Add(ab);
 
         }
+     public static void delete(Int32 index)
+     {
+         items.RemoveAt(index);
+     }
+
         public static List<Item> getlist()
         {
             return ItemDL.items;

@@ -51,6 +51,10 @@ namespace loginandregister
         {
             ItemDL.additem(name, category, price);
         }
+        public void delete(Int32 index)
+        {
+            ItemDL.delete(index);
+        }
 
         public List<Item> getlist()
         {

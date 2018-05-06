@@ -94,3 +94,6 @@ C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\log
 C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Paymentdeal.resources
 C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.pyment.resources
 C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.see_deals.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Paymentdeal.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.pyment.resources
+C:\Users\ok\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.see_deals.resources

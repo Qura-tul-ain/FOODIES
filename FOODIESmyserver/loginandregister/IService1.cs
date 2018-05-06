@@ -25,6 +25,8 @@ namespace loginandregister
         [OperationContract]
         void additem(string name, string category, string price);
         [OperationContract]
+        void delete(Int32 index);
+        [OperationContract]
          void adddeal(string name, string price);
         [OperationContract]
         List<Item> getlist();

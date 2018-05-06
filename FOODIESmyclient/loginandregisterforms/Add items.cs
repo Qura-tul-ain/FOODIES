@@ -90,6 +90,17 @@ namespace loginandregisterforms
             this.Hide();
             o.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+            {
+                Int32 inx = item.Index;
+                server.Service1 server = new server.Service1();
+                server.delete(inx, true);
+                show();
+            }
+        }
     }
 }
 
