@@ -100,6 +100,13 @@ namespace loginandregisterforms
                 show();
             }
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            EditItems o = new EditItems();
+            this.Hide();
+            o.Show();
+        }
     }
 }
 

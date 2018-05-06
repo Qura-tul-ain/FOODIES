@@ -72,6 +72,12 @@
     <Compile Include="Cashierlogin.Designer.cs">
       <DependentUpon>Cashierlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditItems.Designer.cs">
+      <DependentUpon>EditItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="forget.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cashierlogin.resx">
       <DependentUpon>Cashierlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditItems.resx">
+      <DependentUpon>EditItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forget.resx">
       <DependentUpon>forget.cs</DependentUpon>

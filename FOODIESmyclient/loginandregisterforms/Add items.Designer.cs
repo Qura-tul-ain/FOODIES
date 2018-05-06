@@ -66,6 +66,7 @@
             this.linkLabel3.TabIndex = 38;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Edit Item";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -96,7 +97,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Gabriola", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(535, 193);
+            this.button1.Location = new System.Drawing.Point(491, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 37);
             this.button1.TabIndex = 34;
