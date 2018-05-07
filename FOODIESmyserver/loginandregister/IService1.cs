@@ -21,6 +21,8 @@ namespace loginandregister
 
         [OperationContract]
         bool resetpassword(string name);
+        [OperationContract]
+        void onlyusers(string name);
 
         [OperationContract]
         void additem(string name, string category, string price);

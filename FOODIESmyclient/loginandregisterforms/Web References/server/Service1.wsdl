@@ -25,6 +25,12 @@
   <wsdl:message name="IService1_resetpassword_OutputMessage">
     <wsdl:part name="parameters" element="tns:resetpasswordResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_onlyusers_InputMessage">
+    <wsdl:part name="parameters" element="tns:onlyusers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_onlyusers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:onlyusersResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_additem_InputMessage">
     <wsdl:part name="parameters" element="tns:additem" />
   </wsdl:message>
@@ -182,6 +188,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/resetpassword" message="tns:IService1_resetpassword_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/resetpasswordResponse" message="tns:IService1_resetpassword_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="onlyusers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/onlyusers" message="tns:IService1_onlyusers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/onlyusersResponse" message="tns:IService1_onlyusers_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="additem">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/additem" message="tns:IService1_additem_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/additemResponse" message="tns:IService1_additem_OutputMessage" />
@@ -301,6 +311,15 @@
     </wsdl:operation>
     <wsdl:operation name="resetpassword">
       <soap:operation soapAction="http://tempuri.org/IService1/resetpassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="onlyusers">
+      <soap:operation soapAction="http://tempuri.org/IService1/onlyusers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

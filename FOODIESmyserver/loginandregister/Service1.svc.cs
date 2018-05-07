@@ -108,7 +108,10 @@ namespace loginandregister
         {
             ItemDL.orderitem(name, category, price, quantity);
         }
-
+        public  void onlyusers(string name)
+        {
+            Userdl.onlyusers(name);
+        }
         public  List<payment> getlocation()
         {
             return paymentDL.Adresslist;

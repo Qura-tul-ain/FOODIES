@@ -35,6 +35,8 @@ namespace loginandregisterforms.server {
         
         private System.Threading.SendOrPostCallback resetpasswordOperationCompleted;
         
+        private System.Threading.SendOrPostCallback onlyusersOperationCompleted;
+        
         private System.Threading.SendOrPostCallback additemOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteOperationCompleted;
@@ -129,6 +131,9 @@ namespace loginandregisterforms.server {
         
         /// <remarks/>
         public event resetpasswordCompletedEventHandler resetpasswordCompleted;
+        
+        /// <remarks/>
+        public event onlyusersCompletedEventHandler onlyusersCompleted;
         
         /// <remarks/>
         public event additemCompletedEventHandler additemCompleted;
@@ -303,6 +308,34 @@ namespace loginandregisterforms.server {
             if ((this.resetpasswordCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.resetpasswordCompleted(this, new resetpasswordCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/onlyusers", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void onlyusers([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            this.Invoke("onlyusers", new object[] {
+                        name});
+        }
+        
+        /// <remarks/>
+        public void onlyusersAsync(string name) {
+            this.onlyusersAsync(name, null);
+        }
+        
+        /// <remarks/>
+        public void onlyusersAsync(string name, object userState) {
+            if ((this.onlyusersOperationCompleted == null)) {
+                this.onlyusersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnonlyusersOperationCompleted);
+            }
+            this.InvokeAsync("onlyusers", new object[] {
+                        name}, this.onlyusersOperationCompleted, userState);
+        }
+        
+        private void OnonlyusersOperationCompleted(object arg) {
+            if ((this.onlyusersCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.onlyusersCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1315,6 +1348,10 @@ namespace loginandregisterforms.server {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void onlyusersCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]

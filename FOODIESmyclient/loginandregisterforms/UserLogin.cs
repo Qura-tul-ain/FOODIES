@@ -35,6 +35,7 @@ namespace loginandregisterforms
             bool isvaliduser;
             server.Service1 myuser = new server.Service1();
             myuser.login(textBox1.Text, textBox2.Text, out isvalid, out isvaliduser);
+            myuser.onlyusers(textBox1.Text);
             if (isvalid)
             {
                 MessageBox.Show("Valid user");

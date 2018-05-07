@@ -55,23 +55,47 @@ namespace loginandregisterforms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserLogin o = new UserLogin();
-            this.Hide();
-            o.Show();
+            if (checkBox1.Checked == false && checkBox2.Checked == false)
+            {
+
+                UserLogin o = new UserLogin();
+                this.Hide();
+                o.Show();
+            }
+            else
+                MessageBox.Show("Only user can registered from here");
+
+
         }
+
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login o = new Login();
-            this.Hide();
-            o.Show();
+           
+            if (checkBox1.Checked == true)
+            {
+                Login o = new Login();
+                this.Hide();
+                o.Show();
+                
+            }
+            else
+            {
+                MessageBox.Show("Only admin can login from here");
+            }
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Cashierlogin o = new Cashierlogin();
-            this.Hide();
-            o.Show();
+            if (checkBox2.Checked == true)
+            {
+
+                Cashierlogin o = new Cashierlogin();
+                this.Hide();
+                o.Show();
+            }
+            else
+                MessageBox.Show("Only cashier can login from here");
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

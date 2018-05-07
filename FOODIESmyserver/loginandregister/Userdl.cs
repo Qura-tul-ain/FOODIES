@@ -11,6 +11,7 @@ namespace loginandregister
     public class Userdl
     {
         public static List<User> RegisterUser = new List<User>();
+        public static List<User> onlyuser = new List<User>();
 
         public static bool Registeration(string name,string password,string cpassword,bool isadmin,bool iscashier)
         {
@@ -67,6 +68,13 @@ namespace loginandregister
                     check = true;
             }
             return check;
+        }
+
+        public static void onlyusers(string name)
+        {
+            User a = new User();
+            a.Name = name;
+            Userdl.onlyuser.Add(a);
         }
 
         public static bool resetpassword(string name)
