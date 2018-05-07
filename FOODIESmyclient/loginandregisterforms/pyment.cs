@@ -15,10 +15,16 @@ namespace loginandregisterforms
         public pyment()
         {
             InitializeComponent();
+      
         }
 
         private void pyment_Load(object sender, EventArgs e)
         {
+            server.Service1 o = new server.Service1(); server.Service1 oo = new server.Service1();
+            BindingSource data = new BindingSource();
+            data.DataSource = oo.getlocation();
+           comboBox1.DataSource = data;
+           comboBox1.DisplayMember = "Adress";
             priceShow();
         }
         public  void priceShow()

@@ -33,7 +33,6 @@ namespace loginandregisterforms
 
             server.Service1 myitems = new server.Service1();
             myitems.additem(textBox1.Text, comboBox1.Text, textBox2.Text);
-            myitems.addlocation(textBox3.Text);
             show();
 
 

@@ -163,6 +163,12 @@
   <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getlocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:getlocation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getlocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getlocationResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="Registeration">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Registeration" message="tns:IService1_Registeration_InputMessage" />
@@ -267,6 +273,10 @@
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getlocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getlocation" message="tns:IService1_getlocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getlocationResponse" message="tns:IService1_getlocation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -498,6 +508,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getlocation">
+      <soap:operation soapAction="http://tempuri.org/IService1/getlocation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

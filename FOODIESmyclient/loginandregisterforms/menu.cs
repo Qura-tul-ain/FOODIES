@@ -68,7 +68,7 @@ namespace loginandregisterforms
                     dataGridView2.Rows[n].Cells[0].Value == item.Cells[1].Value.ToString();
                 }
         }*/
-            showorder();
+            
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -81,6 +81,32 @@ namespace loginandregisterforms
             pyment o = new pyment();
             this.Hide();
             o.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            showorder();
+        }
+
+        private void DELETE_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dataGridView2.SelectedRows)
+            {
+                Int32 inx = item.Index;
+                server.Service1 server = new server.Service1();
+                server.delete(inx, true);
+                showorder();
+            }
         }
     }
 }

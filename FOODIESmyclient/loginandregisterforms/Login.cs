@@ -88,5 +88,12 @@ namespace loginandregisterforms
         {
 
         }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Add_Location o = new Add_Location();
+            this.Hide();
+            o.Show();
+        }
     }
 }

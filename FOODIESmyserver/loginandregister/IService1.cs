@@ -87,6 +87,10 @@ namespace loginandregister
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        // for location
+        [OperationContract]
+        List<payment> getlocation();
+
         // TODO: Add your service operations here
     }
 

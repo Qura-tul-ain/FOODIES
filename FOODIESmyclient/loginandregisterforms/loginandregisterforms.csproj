@@ -60,6 +60,12 @@
     <Compile Include="Add items.Designer.cs">
       <DependentUpon>Add items.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Location.Designer.cs">
+      <DependentUpon>Add_Location.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashierlogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <EmbeddedResource Include="Add items.resx">
       <DependentUpon>Add items.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add_Location.resx">
+      <DependentUpon>Add_Location.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashierlogin.resx">
       <DependentUpon>Cashierlogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +188,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\server\Item.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\server\payment.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\server\Reference.map">

@@ -338,4 +338,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getlocation">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getlocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getlocationResult" nillable="true" type="q7:ArrayOfpayment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

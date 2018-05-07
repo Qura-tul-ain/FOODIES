@@ -109,9 +109,9 @@ namespace loginandregister
             ItemDL.orderitem(name, category, price, quantity);
         }
 
-        public void oederdeal(string name, string category, string price, string quantity)
+        public  List<payment> getlocation()
         {
-            throw new NotImplementedException();
+            return paymentDL.Adresslist;
         }
 
         public List<Item> getorder()

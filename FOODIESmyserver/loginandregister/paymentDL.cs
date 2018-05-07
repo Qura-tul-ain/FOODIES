@@ -5,8 +5,10 @@ using System.Web;
 using System.Runtime.Serialization;
 namespace loginandregister
 {
+    [DataContract]
     public class paymentDL
     {
+        [DataMember]
         public static List<payment> Adresslist = new List<payment>();
 
 
@@ -16,6 +18,10 @@ namespace loginandregister
             obj.Adress = name;
             paymentDL.Adresslist.Add(obj);
 
+        }
+        public static List<payment> getlocation()
+        {
+            return paymentDL.Adresslist;
         }
 
         public static bool islocation(string adress)
