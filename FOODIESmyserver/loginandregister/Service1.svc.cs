@@ -60,6 +60,11 @@ namespace loginandregister
         {
             return ItemDL.getlist();
         }
+
+        public List<User> getusers()
+        {
+            return Userdl.getusers();
+        }
         //deals
         public void adddeal(string name, string price)
         {

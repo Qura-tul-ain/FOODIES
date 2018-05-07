@@ -48,6 +48,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getusers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getusersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getusersResult" nillable="true" type="q1:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="onlyusers">
     <xs:complexType>
       <xs:sequence>
@@ -107,7 +119,7 @@
   <xs:element name="getlistResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getlistResult" nillable="true" type="q1:ArrayOfItem" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getlistResult" nillable="true" type="q2:ArrayOfItem" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -133,7 +145,7 @@
   <xs:element name="getdealResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getdealResult" nillable="true" type="q2:ArrayOfDeal" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getdealResult" nillable="true" type="q3:ArrayOfDeal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -160,7 +172,7 @@
   <xs:element name="getorderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getorderResult" nillable="true" type="q3:ArrayOfItem" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getorderResult" nillable="true" type="q4:ArrayOfItem" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -272,7 +284,7 @@
   <xs:element name="getorderlistResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getorderlistResult" nillable="true" type="q4:ArrayOfDeal" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getorderlistResult" nillable="true" type="q5:ArrayOfDeal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -339,14 +351,14 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="composite" nillable="true" type="q5:CompositeType" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="composite" nillable="true" type="q6:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q6:CompositeType" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q7:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -358,7 +370,7 @@
   <xs:element name="getlocationResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getlocationResult" nillable="true" type="q7:ArrayOfpayment" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/loginandregister" minOccurs="0" name="getlocationResult" nillable="true" type="q8:ArrayOfpayment" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

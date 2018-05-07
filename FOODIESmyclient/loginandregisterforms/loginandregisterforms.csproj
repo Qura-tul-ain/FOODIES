@@ -122,6 +122,12 @@
     <Compile Include="see_deals.Designer.cs">
       <DependentUpon>see_deals.cs</DependentUpon>
     </Compile>
+    <Compile Include="Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Status.Designer.cs">
+      <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <EmbeddedResource Include="see_deals.resx">
       <DependentUpon>see_deals.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Status.resx">
+      <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +224,9 @@
     </None>
     <None Include="Web References\server\Service11.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\server\User.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

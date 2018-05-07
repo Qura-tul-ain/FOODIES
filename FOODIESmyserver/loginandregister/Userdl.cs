@@ -70,6 +70,11 @@ namespace loginandregister
             return check;
         }
 
+        public static List<User> getusers()
+        {
+            return Userdl.onlyuser;
+        }
+
         public static void onlyusers(string name)
         {
             User a = new User();

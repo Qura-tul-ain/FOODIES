@@ -22,6 +22,8 @@ namespace loginandregister
         [OperationContract]
         bool resetpassword(string name);
         [OperationContract]
+        List<User> getusers();
+        [OperationContract]
         void onlyusers(string name);
 
         [OperationContract]
