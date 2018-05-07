@@ -19,9 +19,16 @@ namespace loginandregisterforms
 
         private void Paymentdeal_Load(object sender, EventArgs e)
         {
+            //location
+            server.Service1 oo = new server.Service1();
+            BindingSource data = new BindingSource();
+            data.DataSource = oo.getlocation();
+            comboBox1.DataSource = data;
+            comboBox1.DisplayMember = "Adress";
+          
+            //
             double getorderpriceResult;
             bool getorderpriceResultspecified;
-
             server.Service1 s = new server.Service1();
             s.getorderprice(out getorderpriceResult, out getorderpriceResultspecified);
             textBox1.Text = Convert.ToString(getorderpriceResult);
@@ -44,6 +51,22 @@ namespace loginandregisterforms
             server.Service1 s = new server.Service1();
             s.getfinalbill(out finalbillResult, out finalbillResultSpecified);
             textBox3.Text = Convert.ToString(finalbillResult);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bool islocation;
+            bool islocationresult;
+            server.Service1 o = new server.Service1();
+            o.islocation(comboBox1.Text, out islocation, out islocationresult);
+            if (islocation == true)
+            {
+                MessageBox.Show("Order send to nearest branch");
+            }
+            else
+            {
+                MessageBox.Show("Select nearest location");
+            }
         }
     }
 }

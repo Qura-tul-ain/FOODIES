@@ -51,6 +51,10 @@ namespace loginandregister
 
 
         }
+        public static void deleteorderdeal(Int32 index)
+        {
+            dealorderlist.RemoveAt(index);
+        }
         public static List<Deal> getorderlist()
         {
             return dealDl.dealorderlist;

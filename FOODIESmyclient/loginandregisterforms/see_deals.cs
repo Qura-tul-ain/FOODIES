@@ -70,5 +70,16 @@ namespace loginandregisterforms
             s.orderdeal(n, p, q);
         
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dealorderlist in this.dataGridView2.SelectedRows)
+            {
+                Int32 inx = dealorderlist.Index;
+                server.Service1 server = new server.Service1();
+                server.deleteorderdeal(inx, true);
+                showorderdeal();
+            }
+        }
     }
 }

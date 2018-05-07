@@ -132,6 +132,10 @@ namespace loginandregister
         {
             dealDl.calfinalbill(x);
         }
+        public void deleteorderdeal(Int32 index)
+        {
+            dealDl.deleteorderdeal(index);
+        }
 
         //deals_end
         public void orderitem(string name, string category, string price, string quantity)

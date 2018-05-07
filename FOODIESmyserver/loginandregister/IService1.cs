@@ -96,8 +96,10 @@ namespace loginandregister
         void calfinalbill(double x);
 
         [OperationContract]
-
         double gettax1();
+
+        [OperationContract]
+        void deleteorderdeal(Int32 index);
 
 
 
