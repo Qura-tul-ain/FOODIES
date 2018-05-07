@@ -115,6 +115,7 @@
             this.linkLabel1.TabIndex = 46;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "See Manu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label5
             // 

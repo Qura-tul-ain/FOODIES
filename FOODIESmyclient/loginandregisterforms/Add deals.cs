@@ -44,7 +44,7 @@ namespace loginandregisterforms
             BindingSource bs = new BindingSource();
             bs.DataSource = o.getlist();
             dataGridView1.DataSource = bs;
-
+            
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -98,7 +98,7 @@ namespace loginandregisterforms
             BindingSource bs = new BindingSource();
             bs.DataSource = o.getdeal();
             dataGridView2.DataSource = bs;
-
+            dataGridView2.Columns["Quantity"].Visible = false;
         }
 
 

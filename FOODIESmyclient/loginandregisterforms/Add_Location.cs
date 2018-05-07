@@ -26,6 +26,7 @@ namespace loginandregisterforms
         {
             server.Service1 myitems = new server.Service1();
             myitems.addlocation(textBox1.Text);
+            MessageBox.Show("New location has been added");
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

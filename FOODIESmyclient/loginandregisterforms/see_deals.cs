@@ -81,5 +81,12 @@ namespace loginandregisterforms
                 showorderdeal();
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            menu m = new menu();
+            m.Show();
+            this.Hide();
+        }
     }
 }
