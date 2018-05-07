@@ -14,17 +14,30 @@ namespace loginandregister
     public interface IService1
     {
         [OperationContract]
-        bool Registeration(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier);
+        bool RegisterationUser(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier);
 
         [OperationContract]
-        bool login(string name,string password);
+        bool RegisterationAdmin(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier);
+
+
+        [OperationContract]
+        bool RegisterationCashier(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier);
+
+        [OperationContract]
+        bool loginUser(string name,string password);
+
+        [OperationContract]
+        bool loginAdmin(string name, string password);
+
+        [OperationContract]
+        bool loginCashier(string name, string password);
 
         [OperationContract]
         bool resetpassword(string name);
         [OperationContract]
-        List<User> getusers();
-        [OperationContract]
-        void onlyusers(string name);
+        List<User> getuser();
+
+
 
         [OperationContract]
         void additem(string name, string category, string price);

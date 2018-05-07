@@ -26,28 +26,48 @@ namespace loginandregisterforms
         {
             bool isCashierSepecified = true;
             bool isAdminSepecified = true;
-            bool ispresent;
+            bool ispresent=false;
             bool isregister;
-            server.Service1 myservse = new server.Service1();
-            myservse.Registeration(textBox1.Text, textBox2.Text, textBox3.Text, checkBox1.Checked, true,checkBox2.Checked,true,out ispresent,out isregister);
-            if (ispresent)
+           server.Service1 myservse = new server.Service1();
+            if (checkBox1.Checked == true && checkBox2.Checked==false)
             {
-                MessageBox.Show("Either User Is already present or password and cpassword is not same!!");
-            }
-            else
-            {
-                if(checkBox1.Checked==true)
+                myservse.RegisterationAdmin(textBox1.Text, textBox2.Text, textBox3.Text, checkBox1.Checked, true, checkBox2.Checked, true, out ispresent, out isregister);
+                if (ispresent)
                 {
-                    MessageBox.Show("You successfully registered!!! Admin login from Admin login form");
-                }
-                else if(checkBox2.Checked==true)
-                {
-                    MessageBox.Show("You successfully registered!!!! Cashier login from Cashier login form");
+                    MessageBox.Show("Either User Is already present or password and cpassword is not same!!");
                 }
                 else
                 {
-                    MessageBox.Show("You successfully registered!!!!!! And login from user login form...");
+                    MessageBox.Show("Admin registered");
                 }
+            }
+            else if (checkBox2.Checked == true && checkBox1.Checked==false)
+            {
+                myservse.RegisterationCashier(textBox1.Text, textBox2.Text, textBox3.Text, checkBox1.Checked, true, checkBox2.Checked, true, out ispresent, out isregister);
+                if (ispresent)
+                {
+                    MessageBox.Show("Either User Is already present or password and cpassword is not same!!");
+                }
+                else
+                {
+                    MessageBox.Show("Cashier registered");
+                }
+            }
+            else if(checkBox1.Checked==false && checkBox2.Checked==false)
+            {
+                myservse.RegisterationUser(textBox1.Text, textBox2.Text, textBox3.Text, checkBox1.Checked, true, checkBox2.Checked, true, out ispresent, out isregister);
+                if (ispresent)
+                {
+                    MessageBox.Show("Either User Is already present or password and cpassword is not same!!");
+                }
+                else
+                {
+                    MessageBox.Show("User registered");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Some Error");
             }
             
 
@@ -55,15 +75,12 @@ namespace loginandregisterforms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (checkBox1.Checked == false && checkBox2.Checked == false)
-            {
+           
 
                 UserLogin o = new UserLogin();
                 this.Hide();
                 o.Show();
-            }
-            else
-                MessageBox.Show("Only user can registered from here");
+           
 
 
         }
@@ -72,30 +89,21 @@ namespace loginandregisterforms
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
            
-            if (checkBox1.Checked == true)
-            {
+            
                 Login o = new Login();
                 this.Hide();
                 o.Show();
                 
-            }
-            else
-            {
-                MessageBox.Show("Only admin can login from here");
-            }
+           
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (checkBox2.Checked == true)
-            {
 
                 Cashierlogin o = new Cashierlogin();
                 this.Hide();
                 o.Show();
-            }
-            else
-                MessageBox.Show("Only cashier can login from here");
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

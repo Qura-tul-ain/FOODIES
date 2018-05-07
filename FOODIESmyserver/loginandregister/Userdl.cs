@@ -11,9 +11,11 @@ namespace loginandregister
     public class Userdl
     {
         public static List<User> RegisterUser = new List<User>();
-        public static List<User> onlyuser = new List<User>();
+        public static List<User> RegisterAdmin= new List<User>();
+        public static List<User> RegisterCashier = new List<User>();
 
-        public static bool Registeration(string name,string password,string cpassword,bool isadmin,bool iscashier)
+
+        public static bool RegisterationUser(string name,string password,string cpassword,bool isadmin,bool iscashier)
         {
             User obj = new User();
 
@@ -59,7 +61,106 @@ namespace loginandregister
                
             }
         }
-        public static bool login(string name,string password)
+
+
+        public static bool RegisterationAdmin(string name, string password, string cpassword, bool isadmin, bool iscashier)
+        {
+            User obj = new User();
+
+            Boolean ac = false;
+            Boolean ab = false;
+            //  Boolean omg = false;
+            foreach (User b in Userdl.RegisterUser)
+            {
+                if (b.Name == name)
+                {
+                    ac = true;
+
+                }
+            }
+            if (ac)
+            {
+                return ac;
+            }
+
+
+            else
+            {
+
+                obj.Name = name;
+                obj.Password = password;
+                obj.Cpassword = cpassword;
+                obj.Isadmin = isadmin;
+                obj.Iscashier = iscashier;
+                if (obj.Password != obj.Cpassword)
+                {
+                    ab = true;
+                }
+                if (ab)
+                {
+                    return ab;
+
+                }
+                else
+                {
+                    Userdl.RegisterAdmin.Add(obj);
+                    return ac;
+                }
+
+            }
+        }
+
+
+
+
+        public static bool RegisterationCashier(string name, string password, string cpassword, bool isadmin, bool iscashier)
+        {
+            User obj = new User();
+
+            Boolean ac = false;
+            Boolean ab = false;
+            //  Boolean omg = false;
+            foreach (User b in Userdl.RegisterUser)
+            {
+                if (b.Name == name)
+                {
+                    ac = true;
+
+                }
+            }
+            if (ac)
+            {
+                return ac;
+            }
+
+
+            else
+            {
+
+                obj.Name = name;
+                obj.Password = password;
+                obj.Cpassword = cpassword;
+                obj.Isadmin = isadmin;
+                obj.Iscashier = iscashier;
+                if (obj.Password != obj.Cpassword)
+                {
+                    ab = true;
+                }
+                if (ab)
+                {
+                    return ab;
+
+                }
+                else
+                {
+                    Userdl.RegisterCashier.Add(obj);
+                    return ac;
+                }
+
+            }
+        }
+
+        public static bool loginUser(string name,string password)
         {
             bool check = false;
             foreach (User u in Userdl.RegisterUser)
@@ -70,16 +171,33 @@ namespace loginandregister
             return check;
         }
 
-        public static List<User> getusers()
+        public static bool loginAdmin(string name, string password)
         {
-            return Userdl.onlyuser;
+            bool check = false;
+            foreach (User u in Userdl.RegisterAdmin)
+            {
+                if (u.Name == name && u.Password == password)
+                    check = true;
+            }
+            return check;
         }
 
-        public static void onlyusers(string name)
+
+        public static bool loginCashier(string name, string password)
         {
-            User a = new User();
-            a.Name = name;
-            Userdl.onlyuser.Add(a);
+            bool check = false;
+            foreach (User u in Userdl.RegisterCashier)
+            {
+                if (u.Name == name && u.Password == password)
+                    check = true;
+            }
+            return check;
+        }
+
+       
+        public static List<User> getuser()
+        {
+            return Userdl.RegisterUser;
         }
 
         public static bool resetpassword(string name)

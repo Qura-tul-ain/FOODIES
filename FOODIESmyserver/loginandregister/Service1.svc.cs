@@ -31,15 +31,43 @@ namespace loginandregister
             return composite;
         }
 
-        public bool login(string name, string password)
+        public bool loginAdmin(string name, string password)
         {
-            return Userdl.login(name, password);
+            return Userdl.loginAdmin(name, password);
+        }
+
+        public bool loginUser(string name, string password)
+        {
+            return Userdl.loginUser(name, password);
         }
 
 
-        public bool Registeration(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier)
+        public List<User> getuser()
         {
-            return Userdl.Registeration(name, password, cpassword, isadmin, iscashier);
+            return Userdl.getuser();
+        }
+
+        public bool loginCashier(string name, string password)
+        {
+            return Userdl.loginCashier(name, password);
+        }
+
+
+
+
+        public bool RegisterationUser(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier)
+        {
+            return Userdl.RegisterationUser(name, password, cpassword, isadmin, iscashier);
+        }
+
+        public bool RegisterationAdmin(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier)
+        {
+            return Userdl.RegisterationAdmin(name, password, cpassword, isadmin, iscashier);
+        }
+
+        public bool RegisterationCashier(string name, string password, string cpassword, Boolean isadmin, Boolean iscashier)
+        {
+            return Userdl.RegisterationCashier(name, password, cpassword, isadmin, iscashier);
         }
 
         public bool resetpassword(string name)
@@ -61,10 +89,7 @@ namespace loginandregister
             return ItemDL.getlist();
         }
 
-        public List<User> getusers()
-        {
-            return Userdl.getusers();
-        }
+       
         //deals
         public void adddeal(string name, string price)
         {
@@ -113,10 +138,7 @@ namespace loginandregister
         {
             ItemDL.orderitem(name, category, price, quantity);
         }
-        public  void onlyusers(string name)
-        {
-            Userdl.onlyusers(name);
-        }
+        
         public  List<payment> getlocation()
         {
             return paymentDL.Adresslist;

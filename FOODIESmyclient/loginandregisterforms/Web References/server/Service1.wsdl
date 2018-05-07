@@ -7,17 +7,41 @@
       <xsd:import schemaLocation="http://localhost:64893/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/loginandregister" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_Registeration_InputMessage">
-    <wsdl:part name="parameters" element="tns:Registeration" />
+  <wsdl:message name="IService1_RegisterationUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationUser" />
   </wsdl:message>
-  <wsdl:message name="IService1_Registeration_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RegisterationResponse" />
+  <wsdl:message name="IService1_RegisterationUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_login_InputMessage">
-    <wsdl:part name="parameters" element="tns:login" />
+  <wsdl:message name="IService1_RegisterationAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationAdmin" />
   </wsdl:message>
-  <wsdl:message name="IService1_login_OutputMessage">
-    <wsdl:part name="parameters" element="tns:loginResponse" />
+  <wsdl:message name="IService1_RegisterationAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegisterationCashier_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationCashier" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RegisterationCashier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationCashierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:loginUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:loginAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginCashier_InputMessage">
+    <wsdl:part name="parameters" element="tns:loginCashier" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginCashier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginCashierResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_resetpassword_InputMessage">
     <wsdl:part name="parameters" element="tns:resetpassword" />
@@ -25,17 +49,11 @@
   <wsdl:message name="IService1_resetpassword_OutputMessage">
     <wsdl:part name="parameters" element="tns:resetpasswordResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_getusers_InputMessage">
-    <wsdl:part name="parameters" element="tns:getusers" />
+  <wsdl:message name="IService1_getuser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getuser" />
   </wsdl:message>
-  <wsdl:message name="IService1_getusers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getusersResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_onlyusers_InputMessage">
-    <wsdl:part name="parameters" element="tns:onlyusers" />
-  </wsdl:message>
-  <wsdl:message name="IService1_onlyusers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:onlyusersResponse" />
+  <wsdl:message name="IService1_getuser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getuserResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_additem_InputMessage">
     <wsdl:part name="parameters" element="tns:additem" />
@@ -182,25 +200,37 @@
     <wsdl:part name="parameters" element="tns:getlocationResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="Registeration">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Registeration" message="tns:IService1_Registeration_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegisterationResponse" message="tns:IService1_Registeration_OutputMessage" />
+    <wsdl:operation name="RegisterationUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegisterationUser" message="tns:IService1_RegisterationUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegisterationUserResponse" message="tns:IService1_RegisterationUser_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="login">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/login" message="tns:IService1_login_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginResponse" message="tns:IService1_login_OutputMessage" />
+    <wsdl:operation name="RegisterationAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegisterationAdmin" message="tns:IService1_RegisterationAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegisterationAdminResponse" message="tns:IService1_RegisterationAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterationCashier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RegisterationCashier" message="tns:IService1_RegisterationCashier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegisterationCashierResponse" message="tns:IService1_RegisterationCashier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loginUser" message="tns:IService1_loginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginUserResponse" message="tns:IService1_loginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loginAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loginAdmin" message="tns:IService1_loginAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginAdminResponse" message="tns:IService1_loginAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loginCashier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loginCashier" message="tns:IService1_loginCashier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginCashierResponse" message="tns:IService1_loginCashier_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="resetpassword">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/resetpassword" message="tns:IService1_resetpassword_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/resetpasswordResponse" message="tns:IService1_resetpassword_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getusers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getusers" message="tns:IService1_getusers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getusersResponse" message="tns:IService1_getusers_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="onlyusers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/onlyusers" message="tns:IService1_onlyusers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/onlyusersResponse" message="tns:IService1_onlyusers_OutputMessage" />
+    <wsdl:operation name="getuser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getuser" message="tns:IService1_getuser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getuserResponse" message="tns:IService1_getuser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="additem">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/additem" message="tns:IService1_additem_InputMessage" />
@@ -301,8 +331,8 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Registeration">
-      <soap:operation soapAction="http://tempuri.org/IService1/Registeration" style="document" />
+    <wsdl:operation name="RegisterationUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/RegisterationUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -310,8 +340,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="login">
-      <soap:operation soapAction="http://tempuri.org/IService1/login" style="document" />
+    <wsdl:operation name="RegisterationAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/RegisterationAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterationCashier">
+      <soap:operation soapAction="http://tempuri.org/IService1/RegisterationCashier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/loginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/loginAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginCashier">
+      <soap:operation soapAction="http://tempuri.org/IService1/loginCashier" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -328,17 +394,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getusers">
-      <soap:operation soapAction="http://tempuri.org/IService1/getusers" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="onlyusers">
-      <soap:operation soapAction="http://tempuri.org/IService1/onlyusers" style="document" />
+    <wsdl:operation name="getuser">
+      <soap:operation soapAction="http://tempuri.org/IService1/getuser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

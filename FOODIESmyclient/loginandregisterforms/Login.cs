@@ -29,7 +29,7 @@ namespace loginandregisterforms
             bool isvalid;
             bool isvaliduser;
             server.Service1 myuser = new server.Service1();
-            myuser.login(textBox1.Text, textBox2.Text, out isvalid, out isvaliduser);
+            myuser.loginAdmin(textBox1.Text, textBox2.Text, out isvalid, out isvaliduser);
             if (isvalid)
             {
                 MessageBox.Show("Valid user");

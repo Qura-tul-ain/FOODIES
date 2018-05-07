@@ -110,3 +110,4 @@ C:\Users\Asus\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\lo
 C:\Users\Asus\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.pyment.resources
 C:\Users\Asus\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.see_deals.resources
 C:\Users\Asus\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Status.resources
+C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Status.resources

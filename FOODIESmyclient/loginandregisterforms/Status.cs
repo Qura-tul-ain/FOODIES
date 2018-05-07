@@ -25,7 +25,7 @@ namespace loginandregisterforms
         {
             server.Service1 o = new server.Service1();
             BindingSource bs = new BindingSource();
-            bs.DataSource = o.getusers();
+            bs.DataSource = o.getuser();
             dataGridView1.DataSource = bs;
             dataGridView1.Columns["Isadmin"].Visible = false;
             dataGridView1.Columns["Password"].Visible = false;
