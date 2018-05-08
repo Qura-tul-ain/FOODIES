@@ -193,6 +193,30 @@
   <wsdl:message name="IService1_deleteorderdeal_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteorderdealResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_fbillafterdeletion_InputMessage">
+    <wsdl:part name="parameters" element="tns:fbillafterdeletion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fbillafterdeletion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fbillafterdeletionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BILLdp_InputMessage">
+    <wsdl:part name="parameters" element="tns:BILLdp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BILLdp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BILLdpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BILLdt_InputMessage">
+    <wsdl:part name="parameters" element="tns:BILLdt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BILLdt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BILLdtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BILLdf_InputMessage">
+    <wsdl:part name="parameters" element="tns:BILLdf" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BILLdf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BILLdfResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -329,6 +353,22 @@
     <wsdl:operation name="deleteorderdeal">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteorderdeal" message="tns:IService1_deleteorderdeal_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteorderdealResponse" message="tns:IService1_deleteorderdeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fbillafterdeletion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fbillafterdeletion" message="tns:IService1_fbillafterdeletion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fbillafterdeletionResponse" message="tns:IService1_fbillafterdeletion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BILLdp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BILLdp" message="tns:IService1_BILLdp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BILLdpResponse" message="tns:IService1_BILLdp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BILLdt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BILLdt" message="tns:IService1_BILLdt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BILLdtResponse" message="tns:IService1_BILLdt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BILLdf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BILLdf" message="tns:IService1_BILLdf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BILLdfResponse" message="tns:IService1_BILLdf_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -613,6 +653,42 @@
     </wsdl:operation>
     <wsdl:operation name="deleteorderdeal">
       <soap:operation soapAction="http://tempuri.org/IService1/deleteorderdeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fbillafterdeletion">
+      <soap:operation soapAction="http://tempuri.org/IService1/fbillafterdeletion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BILLdp">
+      <soap:operation soapAction="http://tempuri.org/IService1/BILLdp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BILLdt">
+      <soap:operation soapAction="http://tempuri.org/IService1/BILLdt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BILLdf">
+      <soap:operation soapAction="http://tempuri.org/IService1/BILLdf" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

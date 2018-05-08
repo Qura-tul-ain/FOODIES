@@ -15,6 +15,9 @@ namespace loginandregister
         public static double t = 0;
         public static double f = 0;
         public static double fbill = 0;
+        //varibale after deletion
+        public static double dp = 0;
+        public static double dt = 0; public static double df = 0;
         [DataMember]
         
         public static List<Deal> dealorderlist = new List<Deal>();
@@ -48,12 +51,16 @@ namespace loginandregister
             calTax(t);
             f = p + t;
             calfinalbill(f);
+            dp = total - p;
+            dt = tax - t;
+            df = fbill - f;
 
 
         }
         public static void deleteorderdeal(Int32 index)
         {
             dealorderlist.RemoveAt(index);
+           // fbillafterdeletion();
         }
         public static List<Deal> getorderlist()
         {
@@ -84,6 +91,24 @@ namespace loginandregister
         public static double getfinalbill()
         {
             return dealDl.fbill;
+        }
+      /*  public static void fbillafterdeletion()
+        {
+            dp = total - p;
+            dt = tax - t;
+            df = fbill - f;
+        }*/
+        public static double BILLdp()
+        {
+            return dealDl.dp;
+        }
+        public static double BILLdt()
+        {
+            return dealDl.dt;
+        }
+        public static double BILLdf()
+        {
+            return dealDl.df;
         }
     }
 }

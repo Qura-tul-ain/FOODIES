@@ -68,5 +68,21 @@ namespace loginandregisterforms
                 MessageBox.Show("Select nearest location");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {  double BILLdfResult;
+           bool BILLdfResultSpecified;
+           double BILLdpResult;
+           bool BILLdpResultSpecified;
+           double BILLdtResult;
+           bool BILLdtResultSpecified;
+            server.Service1 s = new server.Service1();
+            s.BILLdf(out BILLdfResult,out BILLdfResultSpecified);
+            textBox3.Text = Convert.ToString(BILLdfResult);
+            s.BILLdp(out BILLdpResult, out BILLdpResultSpecified);
+            textBox1.Text = Convert.ToString(BILLdpResult);
+            s.BILLdt(out BILLdtResult, out BILLdtResultSpecified);
+            textBox2.Text = Convert.ToString(BILLdtResult);
+        }
     }
 }

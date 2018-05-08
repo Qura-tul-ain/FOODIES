@@ -91,6 +91,14 @@ namespace loginandregisterforms.server {
         
         private System.Threading.SendOrPostCallback deleteorderdealOperationCompleted;
         
+        private System.Threading.SendOrPostCallback fbillafterdeletionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback BILLdpOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback BILLdtOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback BILLdfOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
         
         private System.Threading.SendOrPostCallback getlocationOperationCompleted;
@@ -225,6 +233,18 @@ namespace loginandregisterforms.server {
         
         /// <remarks/>
         public event deleteorderdealCompletedEventHandler deleteorderdealCompleted;
+        
+        /// <remarks/>
+        public event fbillafterdeletionCompletedEventHandler fbillafterdeletionCompleted;
+        
+        /// <remarks/>
+        public event BILLdpCompletedEventHandler BILLdpCompleted;
+        
+        /// <remarks/>
+        public event BILLdtCompletedEventHandler BILLdtCompleted;
+        
+        /// <remarks/>
+        public event BILLdfCompletedEventHandler BILLdfCompleted;
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
@@ -1192,6 +1212,116 @@ namespace loginandregisterforms.server {
             if ((this.deleteorderdealCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.deleteorderdealCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/fbillafterdeletion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void fbillafterdeletion() {
+            this.Invoke("fbillafterdeletion", new object[0]);
+        }
+        
+        /// <remarks/>
+        public void fbillafterdeletionAsync() {
+            this.fbillafterdeletionAsync(null);
+        }
+        
+        /// <remarks/>
+        public void fbillafterdeletionAsync(object userState) {
+            if ((this.fbillafterdeletionOperationCompleted == null)) {
+                this.fbillafterdeletionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfbillafterdeletionOperationCompleted);
+            }
+            this.InvokeAsync("fbillafterdeletion", new object[0], this.fbillafterdeletionOperationCompleted, userState);
+        }
+        
+        private void OnfbillafterdeletionOperationCompleted(object arg) {
+            if ((this.fbillafterdeletionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.fbillafterdeletionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/BILLdp", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void BILLdp(out double BILLdpResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool BILLdpResultSpecified) {
+            object[] results = this.Invoke("BILLdp", new object[0]);
+            BILLdpResult = ((double)(results[0]));
+            BILLdpResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void BILLdpAsync() {
+            this.BILLdpAsync(null);
+        }
+        
+        /// <remarks/>
+        public void BILLdpAsync(object userState) {
+            if ((this.BILLdpOperationCompleted == null)) {
+                this.BILLdpOperationCompleted = new System.Threading.SendOrPostCallback(this.OnBILLdpOperationCompleted);
+            }
+            this.InvokeAsync("BILLdp", new object[0], this.BILLdpOperationCompleted, userState);
+        }
+        
+        private void OnBILLdpOperationCompleted(object arg) {
+            if ((this.BILLdpCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.BILLdpCompleted(this, new BILLdpCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/BILLdt", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void BILLdt(out double BILLdtResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool BILLdtResultSpecified) {
+            object[] results = this.Invoke("BILLdt", new object[0]);
+            BILLdtResult = ((double)(results[0]));
+            BILLdtResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void BILLdtAsync() {
+            this.BILLdtAsync(null);
+        }
+        
+        /// <remarks/>
+        public void BILLdtAsync(object userState) {
+            if ((this.BILLdtOperationCompleted == null)) {
+                this.BILLdtOperationCompleted = new System.Threading.SendOrPostCallback(this.OnBILLdtOperationCompleted);
+            }
+            this.InvokeAsync("BILLdt", new object[0], this.BILLdtOperationCompleted, userState);
+        }
+        
+        private void OnBILLdtOperationCompleted(object arg) {
+            if ((this.BILLdtCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.BILLdtCompleted(this, new BILLdtCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/BILLdf", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void BILLdf(out double BILLdfResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool BILLdfResultSpecified) {
+            object[] results = this.Invoke("BILLdf", new object[0]);
+            BILLdfResult = ((double)(results[0]));
+            BILLdfResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void BILLdfAsync() {
+            this.BILLdfAsync(null);
+        }
+        
+        /// <remarks/>
+        public void BILLdfAsync(object userState) {
+            if ((this.BILLdfOperationCompleted == null)) {
+                this.BILLdfOperationCompleted = new System.Threading.SendOrPostCallback(this.OnBILLdfOperationCompleted);
+            }
+            this.InvokeAsync("BILLdf", new object[0], this.BILLdfOperationCompleted, userState);
+        }
+        
+        private void OnBILLdfOperationCompleted(object arg) {
+            if ((this.BILLdfCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.BILLdfCompleted(this, new BILLdfCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2224,6 +2354,112 @@ namespace loginandregisterforms.server {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void deleteorderdealCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void fbillafterdeletionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void BILLdpCompletedEventHandler(object sender, BILLdpCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class BILLdpCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal BILLdpCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double BILLdpResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool BILLdpResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void BILLdtCompletedEventHandler(object sender, BILLdtCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class BILLdtCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal BILLdtCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double BILLdtResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool BILLdtResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void BILLdfCompletedEventHandler(object sender, BILLdfCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class BILLdfCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal BILLdfCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public double BILLdfResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool BILLdfResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]

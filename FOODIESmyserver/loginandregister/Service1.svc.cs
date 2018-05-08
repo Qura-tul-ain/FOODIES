@@ -136,6 +136,23 @@ namespace loginandregister
         {
             dealDl.deleteorderdeal(index);
         }
+        //extra
+      /*  public void fbillafterdeletion()
+        {
+            dealDl.fbillafterdeletion();
+         }*/
+        public double BILLdp()
+        {
+           return dealDl.BILLdp();
+        }
+        public double BILLdt()
+        {
+            return dealDl.BILLdt();
+        }
+        public double BILLdf()
+        {
+            return dealDl.BILLdf();
+        }
 
         //deals_end
         public void orderitem(string name, string category, string price, string quantity)

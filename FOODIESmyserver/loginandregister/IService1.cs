@@ -100,6 +100,15 @@ namespace loginandregister
 
         [OperationContract]
         void deleteorderdeal(Int32 index);
+        //extra 
+      /*  [OperationContract]
+        void fbillafterdeletion();*/
+        [OperationContract]
+        double BILLdp();
+        [OperationContract]
+        double BILLdt();
+        [OperationContract]
+        double BILLdf();
 
 
 
