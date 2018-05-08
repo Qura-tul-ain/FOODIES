@@ -36,6 +36,8 @@ namespace loginandregister
         bool resetpassword(string name);
         [OperationContract]
         List<User> getuser();
+        [OperationContract]
+        void deleteorder(Int32 index);
 
 
 

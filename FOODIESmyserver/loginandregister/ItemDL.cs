@@ -34,6 +34,11 @@ namespace loginandregister
          items.RemoveAt(index);
      }
 
+        public static void deleteorder(Int32 index)
+        {
+            order.RemoveAt(index);
+        }
+
         public static List<Item> getlist()
         {
             return ItemDL.items;

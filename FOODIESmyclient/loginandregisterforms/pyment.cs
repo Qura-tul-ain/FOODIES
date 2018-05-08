@@ -76,5 +76,12 @@ namespace loginandregisterforms
         {
 
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            menu o = new menu();
+            this.Hide();
+            o.show();
+        }
     }
 }

@@ -126,6 +126,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="deleteorder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="index" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteorderResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="additem">
     <xs:complexType>
       <xs:sequence>
@@ -410,16 +422,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="deleteorderdealResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="fbillafterdeletion">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="fbillafterdeletionResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

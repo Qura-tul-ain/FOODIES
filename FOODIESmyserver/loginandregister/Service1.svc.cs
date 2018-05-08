@@ -41,7 +41,10 @@ namespace loginandregister
             return Userdl.loginUser(name, password);
         }
 
-
+        public  void deleteorder(Int32 index)
+        {
+            ItemDL.deleteorder(index);
+        }
         public List<User> getuser()
         {
             return Userdl.getuser();

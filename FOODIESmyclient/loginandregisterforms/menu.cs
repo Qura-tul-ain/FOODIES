@@ -106,7 +106,7 @@ namespace loginandregisterforms
             {
                 Int32 inx = item.Index;
                 server.Service1 server = new server.Service1();
-                server.delete(inx, true);
+                server.deleteorder(inx,true);
                 showorder();
             }
         }
