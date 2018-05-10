@@ -32,12 +32,12 @@ namespace loginandregisterforms
             myuser.loginAdmin(textBox1.Text, textBox2.Text, out isvalid, out isvaliduser);
             if (isvalid)
             {
-                MessageBox.Show("Valid user");
+                MessageBox.Show("Admin is Valid ");
                 validcall = true;
             }
             else
             {
-                MessageBox.Show("Invalid user");
+                MessageBox.Show("Invalid");
                 validcall = false;
             }
         }

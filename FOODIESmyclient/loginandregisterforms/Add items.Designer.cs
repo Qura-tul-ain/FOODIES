@@ -213,7 +213,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Add_items";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_items";
             this.Load += new System.EventHandler(this.Add_items_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

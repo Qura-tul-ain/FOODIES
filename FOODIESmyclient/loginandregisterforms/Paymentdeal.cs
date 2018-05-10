@@ -62,6 +62,9 @@ namespace loginandregisterforms
             if (islocation == true)
             {
                 MessageBox.Show("Order send to nearest branch");
+                last oo = new last();
+                this.Hide();
+                oo.Show();
             }
             else
             {

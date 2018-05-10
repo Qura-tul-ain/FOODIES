@@ -37,11 +37,11 @@ namespace loginandregisterforms
             myuser.loginCashier(textBox1.Text, textBox2.Text, out isvalid, out isvaliduser);
             if (isvalid)
             {
-                MessageBox.Show("Valid user");
+                MessageBox.Show("Valid ");
             }
             else
             {
-                MessageBox.Show("Invalid user");
+                MessageBox.Show("Invalid ");
             }
         }
 

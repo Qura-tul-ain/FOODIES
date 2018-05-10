@@ -49,16 +49,7 @@ namespace loginandregisterforms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (validuser == true)
-            {
-                menu o = new menu();
-                this.Hide();
-                o.Show();
-            }
-            else
-            {
-                MessageBox.Show("Please loGin to Your Account ");
-            }
+           
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -70,9 +61,18 @@ namespace loginandregisterforms
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            foodies a = new foodies();
-            this.Hide();
-            a.Show();
+            if (validuser == true)
+            {
+                foodies a = new foodies();
+                this.Hide();
+                a.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Please loGin to Your Account ");
+            }
+           
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

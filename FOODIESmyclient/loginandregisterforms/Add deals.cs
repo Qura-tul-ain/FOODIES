@@ -59,6 +59,7 @@ namespace loginandregisterforms
 
 
             }
+            dataGridView1.Columns["Quantity"].Visible = false;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -101,8 +102,12 @@ namespace loginandregisterforms
             dataGridView2.Columns["Quantity"].Visible = false;
         }
 
-
-
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Add_Location a = new Add_Location();
+            this.Hide();
+            a.Show();
+        }
     }
     }
 

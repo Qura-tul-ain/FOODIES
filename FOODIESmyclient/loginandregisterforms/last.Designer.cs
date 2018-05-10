@@ -60,7 +60,9 @@
             this.ClientSize = new System.Drawing.Size(629, 394);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "last";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "last";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -163,7 +163,9 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "see_deals";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "see_deals";
             this.Load += new System.EventHandler(this.see_deals_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
