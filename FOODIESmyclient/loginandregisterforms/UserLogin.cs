@@ -67,5 +67,17 @@ namespace loginandregisterforms
             s.Show();
             this.Hide();
         }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            foodies a = new foodies();
+            this.Hide();
+            a.Show();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

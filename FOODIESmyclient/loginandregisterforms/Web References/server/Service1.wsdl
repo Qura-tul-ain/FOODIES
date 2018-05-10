@@ -61,6 +61,12 @@
   <wsdl:message name="IService1_deleteorder_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteorderResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_cal_InputMessage">
+    <wsdl:part name="parameters" element="tns:cal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_cal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:calResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_additem_InputMessage">
     <wsdl:part name="parameters" element="tns:additem" />
   </wsdl:message>
@@ -266,6 +272,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteorder" message="tns:IService1_deleteorder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteorderResponse" message="tns:IService1_deleteorder_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="cal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/cal" message="tns:IService1_cal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/calResponse" message="tns:IService1_cal_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="additem">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/additem" message="tns:IService1_additem_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/additemResponse" message="tns:IService1_additem_OutputMessage" />
@@ -455,6 +465,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteorder">
       <soap:operation soapAction="http://tempuri.org/IService1/deleteorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cal">
+      <soap:operation soapAction="http://tempuri.org/IService1/cal" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

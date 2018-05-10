@@ -25,7 +25,7 @@ namespace loginandregisterforms
             data.DataSource = oo.getlocation();
            comboBox1.DataSource = data;
            comboBox1.DisplayMember = "Adress";
-            priceShow();
+           
         }
         public  void priceShow()
         {
@@ -37,6 +37,7 @@ namespace loginandregisterforms
             Boolean gettaxresult;
 
             server.Service1 o = new server.Service1();
+            o.cal();
             o.getprice(out getprice,out getpriceresult);
             textBox1.Text = Convert.ToString(getprice);
             o.getprice(out gettotalprice, out gettotalpriceresult);
@@ -59,6 +60,9 @@ namespace loginandregisterforms
             if(islocation==true)
             {
                 MessageBox.Show("Order send to nearest branch");
+                last oo = new last();
+                this.Hide();
+                oo.Show();
             }
             else
             {
@@ -82,6 +86,13 @@ namespace loginandregisterforms
             menu o = new menu();
             this.Hide();
             o.show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            priceShow();
+
+
         }
     }
 }

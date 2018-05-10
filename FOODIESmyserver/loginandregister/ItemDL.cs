@@ -59,12 +59,18 @@ namespace loginandregister
             a.Quantity = quantity;
             ItemDL.order.Add(a);
 
-            p1 = Convert.ToInt32(a.Price);
-            p2 = Convert.ToInt32(a.Quantity);
-            p = p1 * p2;
+        }
 
-            Tprice(p);
-
+        public static void cal()
+        {
+            Item o = new Item();
+            foreach(Item a in ItemDL.order)
+            {
+                p1= Convert.ToInt32(a.Price);
+                p2 = Convert.ToInt32(a.Quantity);
+                p= p1 * p2; ;
+                Tprice(p);
+            }
         }
 
         public static void Tprice(int x)

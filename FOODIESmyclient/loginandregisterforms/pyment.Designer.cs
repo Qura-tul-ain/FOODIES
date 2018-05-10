@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -59,7 +60,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(184, 263);
+            this.label6.Location = new System.Drawing.Point(154, 262);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 29);
             this.label6.TabIndex = 19;
@@ -67,21 +68,21 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(319, 221);
+            this.textBox3.Location = new System.Drawing.Point(268, 221);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 18;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 172);
+            this.textBox2.Location = new System.Drawing.Point(268, 172);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 17;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 132);
+            this.textBox1.Location = new System.Drawing.Point(268, 132);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 16;
@@ -90,7 +91,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(184, 224);
+            this.label5.Location = new System.Drawing.Point(153, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 29);
             this.label5.TabIndex = 15;
@@ -100,7 +101,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(184, 172);
+            this.label4.Location = new System.Drawing.Point(153, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 29);
             this.label4.TabIndex = 14;
@@ -110,7 +111,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(184, 135);
+            this.label3.Location = new System.Drawing.Point(153, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 29);
             this.label3.TabIndex = 13;
@@ -146,7 +147,7 @@
             "Shahdara",
             "Joher Town",
             "Mall Road"});
-            this.comboBox1.Location = new System.Drawing.Point(319, 270);
+            this.comboBox1.Location = new System.Drawing.Point(268, 270);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 22;
@@ -165,11 +166,23 @@
             this.linkLabel2.Text = "Menu";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Gabriola", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(414, 123);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 46);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "SHOW MY BILL";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pyment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 391);
+            this.ClientSize = new System.Drawing.Size(629, 394);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.linkLabel1);
@@ -204,5 +217,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -78,6 +78,12 @@
     <Compile Include="EditItems.Designer.cs">
       <DependentUpon>EditItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="foodies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="foodies.Designer.cs">
+      <DependentUpon>foodies.cs</DependentUpon>
+    </Compile>
     <Compile Include="forget.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="last.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="last.Designer.cs">
+      <DependentUpon>last.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -154,11 +166,17 @@
     <EmbeddedResource Include="EditItems.resx">
       <DependentUpon>EditItems.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="foodies.resx">
+      <DependentUpon>foodies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forget.resx">
       <DependentUpon>forget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="last.resx">
+      <DependentUpon>last.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

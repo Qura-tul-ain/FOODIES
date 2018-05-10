@@ -47,6 +47,8 @@ namespace loginandregisterforms.server {
         
         private System.Threading.SendOrPostCallback deleteorderOperationCompleted;
         
+        private System.Threading.SendOrPostCallback calOperationCompleted;
+        
         private System.Threading.SendOrPostCallback additemOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteOperationCompleted;
@@ -167,6 +169,9 @@ namespace loginandregisterforms.server {
         
         /// <remarks/>
         public event deleteorderCompletedEventHandler deleteorderCompleted;
+        
+        /// <remarks/>
+        public event calCompletedEventHandler calCompleted;
         
         /// <remarks/>
         public event additemCompletedEventHandler additemCompleted;
@@ -560,6 +565,32 @@ namespace loginandregisterforms.server {
             if ((this.deleteorderCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.deleteorderCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/cal", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void cal() {
+            this.Invoke("cal", new object[0]);
+        }
+        
+        /// <remarks/>
+        public void calAsync() {
+            this.calAsync(null);
+        }
+        
+        /// <remarks/>
+        public void calAsync(object userState) {
+            if ((this.calOperationCompleted == null)) {
+                this.calOperationCompleted = new System.Threading.SendOrPostCallback(this.OncalOperationCompleted);
+            }
+            this.InvokeAsync("cal", new object[0], this.calOperationCompleted, userState);
+        }
+        
+        private void OncalOperationCompleted(object arg) {
+            if ((this.calCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.calCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1950,6 +1981,10 @@ namespace loginandregisterforms.server {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
     public delegate void deleteorderCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void calCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]

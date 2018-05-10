@@ -45,6 +45,11 @@ namespace loginandregister
         {
             ItemDL.deleteorder(index);
         }
+
+        public  void cal()
+        {
+            ItemDL.cal();
+        }
         public List<User> getuser()
         {
             return Userdl.getuser();

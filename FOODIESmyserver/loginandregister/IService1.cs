@@ -38,9 +38,8 @@ namespace loginandregister
         List<User> getuser();
         [OperationContract]
         void deleteorder(Int32 index);
-
-
-
+        [OperationContract]
+        void cal();
         [OperationContract]
         void additem(string name, string category, string price);
         [OperationContract]
