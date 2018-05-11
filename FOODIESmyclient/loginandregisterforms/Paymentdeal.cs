@@ -87,5 +87,12 @@ namespace loginandregisterforms
             s.BILLdt(out BILLdtResult, out BILLdtResultSpecified);
             textBox2.Text = Convert.ToString(BILLdtResult);
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            see_deals s = new see_deals();
+            s.Show();
+            this.Hide();
+        }
     }
 }

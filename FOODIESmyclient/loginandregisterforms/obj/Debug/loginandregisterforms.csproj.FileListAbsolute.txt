@@ -116,3 +116,5 @@ C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\
 C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.Status.resources
 C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.foodies.resources
 C:\Users\one\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.last.resources
+C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.foodies.resources
+C:\Users\MALYKA\Desktop\FOODIES\FOODIESmyclient\loginandregisterforms\obj\Debug\loginandregisterforms.last.resources
