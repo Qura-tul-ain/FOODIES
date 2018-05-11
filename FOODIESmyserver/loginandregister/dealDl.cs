@@ -88,6 +88,11 @@ namespace loginandregister
 
         }
 
+        public static void deletedeal(Int32 index)
+        {
+            deallist.RemoveAt(index);
+        }
+
         public static double getfinalbill()
         {
             return dealDl.fbill;

@@ -400,6 +400,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="deletedeal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="index" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletedealResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="calfinalbill">
     <xs:complexType>
       <xs:sequence>

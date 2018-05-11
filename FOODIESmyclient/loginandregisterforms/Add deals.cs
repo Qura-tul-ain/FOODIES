@@ -108,6 +108,17 @@ namespace loginandregisterforms
             this.Hide();
             a.Show();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dataGridView2.SelectedRows)
+            {
+                Int32 inx = item.Index;
+                server.Service1 server = new server.Service1();
+                server.deletedeal(inx, true);
+                dealshow();
+            }
+        }
     }
     }
 

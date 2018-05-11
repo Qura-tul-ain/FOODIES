@@ -46,6 +46,11 @@ namespace loginandregister
             ItemDL.deleteorder(index);
         }
 
+        public void deletedeal(Int32 index)
+        {
+            dealDl.deletedeal(index);
+        }
+
         public  void cal()
         {
             ItemDL.cal();

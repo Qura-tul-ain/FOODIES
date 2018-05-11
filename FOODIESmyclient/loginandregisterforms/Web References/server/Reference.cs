@@ -89,6 +89,8 @@ namespace loginandregisterforms.server {
         
         private System.Threading.SendOrPostCallback getfinalbillOperationCompleted;
         
+        private System.Threading.SendOrPostCallback deletedealOperationCompleted;
+        
         private System.Threading.SendOrPostCallback calfinalbillOperationCompleted;
         
         private System.Threading.SendOrPostCallback gettax1OperationCompleted;
@@ -232,6 +234,9 @@ namespace loginandregisterforms.server {
         
         /// <remarks/>
         public event getfinalbillCompletedEventHandler getfinalbillCompleted;
+        
+        /// <remarks/>
+        public event deletedealCompletedEventHandler deletedealCompleted;
         
         /// <remarks/>
         public event calfinalbillCompletedEventHandler calfinalbillCompleted;
@@ -1185,6 +1190,36 @@ namespace loginandregisterforms.server {
             if ((this.getfinalbillCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getfinalbillCompleted(this, new getfinalbillCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/deletedeal", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deletedeal(int index, [System.Xml.Serialization.XmlIgnoreAttribute()] bool indexSpecified) {
+            this.Invoke("deletedeal", new object[] {
+                        index,
+                        indexSpecified});
+        }
+        
+        /// <remarks/>
+        public void deletedealAsync(int index, bool indexSpecified) {
+            this.deletedealAsync(index, indexSpecified, null);
+        }
+        
+        /// <remarks/>
+        public void deletedealAsync(int index, bool indexSpecified, object userState) {
+            if ((this.deletedealOperationCompleted == null)) {
+                this.deletedealOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeletedealOperationCompleted);
+            }
+            this.InvokeAsync("deletedeal", new object[] {
+                        index,
+                        indexSpecified}, this.deletedealOperationCompleted, userState);
+        }
+        
+        private void OndeletedealOperationCompleted(object arg) {
+            if ((this.deletedealCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deletedealCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2355,6 +2390,10 @@ namespace loginandregisterforms.server {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void deletedealCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]

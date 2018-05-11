@@ -21,7 +21,7 @@ namespace loginandregisterforms
         {
             show();
         }
-         public void show()
+        public void show()
         {
             server.Service1 o = new server.Service1();
             BindingSource bs = new BindingSource();
@@ -36,16 +36,30 @@ namespace loginandregisterforms
 
         }
 
-         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-         {
-             Form1 o = new Form1();
-             this.Hide();
-             o.Show();
-         }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 o = new Form1();
+            this.Hide();
+            o.Show();
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Boolean a=true;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                a=Convert.ToBoolean(row.Cells[0].Value);
+                
+                    if (a)
+                    {
+                        MessageBox.Show("vghh");
+                    }
+                
+                else
+                {
+                    MessageBox.Show("Order is completed");
+                }
+            }
         }
     }
 }
